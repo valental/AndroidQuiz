@@ -18,9 +18,13 @@ module Api
     # POST /api/users
     def create
       reg_token = SecureRandom.base58(32)
-      user = User.new(user_params, registration_token: reg_token)
+
+      user = User.new(user_params)
+      user.registration_token = reg_token
 
       if user.save
+        UserMailer.with(id: user.id).invite_email.deliver
+
         render json: user, status: :created
       else
         render json: { errors: user.errors }, status: :bad_request
@@ -45,20 +49,6 @@ module Api
       current_user.destroy
 
       head :no_content
-    end
-
-    # GET /api/users/registrate?token=:token
-    def registrate
-      token = params[:token]
-
-      user = User.find_by(registration_token: token)
-
-      if user
-        user.has_registered = true
-        render json: { registered: 'true' }
-      else
-        render json: { error: 'registration token is not valid' }, status: :not_found
-      end
     end
 
     private

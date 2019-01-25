@@ -1,7 +1,7 @@
 RSpec.describe 'Session API', type: :request do
   include TestHelpers::JsonResponse
 
-  let(:credentials) { { email: 'user@email.com', password: 'pass' } }
+  let(:credentials) { { email: 'user@email.com', password: 'pass', has_registered: true } }
   let(:user) { FactoryBot.create(:user, credentials) }
 
   before { user }
