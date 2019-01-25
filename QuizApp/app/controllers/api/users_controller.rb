@@ -1,6 +1,6 @@
 module Api
   class UsersController < Api::BaseController
-    skip_before_action :ensure_authenticated, only: :create
+    skip_before_action :ensure_authenticated, only: [:create, :registrate]
 
     # GET /api/users
     def index
@@ -17,7 +17,8 @@ module Api
 
     # POST /api/users
     def create
-      user = User.new(user_params)
+      reg_token = SecureRandom.base58(32)
+      user = User.new(user_params, registration_token: reg_token)
 
       if user.save
         render json: user, status: :created
@@ -46,14 +47,27 @@ module Api
       head :no_content
     end
 
+    # GET /api/users/registrate?token=:token
+    def registrate
+      token = params[:token]
+
+      user = User.find_by(registration_token: token)
+
+      if user
+        user.has_registered = true
+        render json: { registered: 'true' }
+      else
+        render json: { error: 'registration token is not valid' }, status: :not_found
+      end
+    end
+
     private
 
     def user_params
       params.require(:user).permit(:first_name,
                                    :last_name,
                                    :email,
-                                   :password,
-                                   :role)
+                                   :password)
     end
 
     def user
