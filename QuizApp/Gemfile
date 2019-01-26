@@ -50,6 +50,8 @@ end
 gem 'faker'
 gem 'database_cleaner', '~> 1.7'
 
+gem 'sendgrid-ruby'
+
 group :test do
   gem 'pundit-matchers', '~> 1.6.0'
   gem 'shoulda-matchers'

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
 
   get '/registrate' => 'registration#registrate'
+
+  root to: 'users#index'
 end

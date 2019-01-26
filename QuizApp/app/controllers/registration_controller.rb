@@ -3,13 +3,13 @@ class RegistrationController < ApplicationController
   def registrate
     token = params[:token]
 
-    user = User.find_by(registration_token: token)
+    @user = User.find_by(registration_token: token)
 
-    if user
-      user.has_registered = true
-      render json: { registered: 'true' }
+    if @user
+      @user.has_registered = true
+      render 'confirmed'
     else
-      render json: { error: 'registration token is not valid' }, status: :not_found
+      render 'invalid'
     end
   end
 end
