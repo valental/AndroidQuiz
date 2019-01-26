@@ -1,6 +1,6 @@
 module Api
   class UsersController < Api::BaseController
-    skip_before_action :ensure_authenticated, only: [:create, :registrate]
+    skip_before_action :ensure_authenticated, only: :create
 
     # GET /api/users
     def index

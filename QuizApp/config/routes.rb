@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
   end
 
-  get '/registrate' => 'registration#registrate'
+  get '/registration/confirm' => 'registration#confirm'
 
   root to: 'users#index'
 end

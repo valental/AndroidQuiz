@@ -1,6 +1,6 @@
 class RegistrationController < ApplicationController
-  # GET /registrate?token=:token
-  def registrate
+  # GET /registration/confirm?token=:token
+  def confirm
     token = params[:token]
 
     @user = User.find_by(registration_token: token)
