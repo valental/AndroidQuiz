@@ -6,7 +6,8 @@ class RegistrationController < ApplicationController
     @user = User.find_by(registration_token: token)
 
     if @user
-      @user.has_registered = true
+      @user.update(has_registered: true)
+
       render 'confirmed'
     else
       render 'invalid'
