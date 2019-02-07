@@ -9,4 +9,8 @@
     <string name="login">Ulogiraj se</string>
     <string name="alreadyHaveAnAcc">Već imaš račun?</string>
     <string name="dontHaveAnAcc">Nemaš račun?</string>
+    <string name="logout">Odlogiraj se</string>
+    <string name="play">Igraj!</string>
+    <string name="myScores">Moji rezultati</string>
+    <string name="allScores">Svi rezultati</string>
 </resources>
