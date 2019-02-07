@@ -22,6 +22,9 @@ public class LoginActivity extends AppCompatActivity {
             PreferencesManager preferencesManager = new PreferencesManager(this);
             EditText editText = (EditText) findViewById(R.id.usernameEditText);
             preferencesManager.SaveUsername(editText.getText().toString());
+            Intent intent = new Intent(this, MainActivity.class);
+            finish();
+            startActivity(intent);
         }
     }
 

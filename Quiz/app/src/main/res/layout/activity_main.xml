@@ -13,11 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#f00"
+        android:background="#00a"
         android:text="@string/play"
         android:textColor="#FFF"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="PlayBtnClick"/>
 
     <Button
         android:id="@+id/myScoresButton"
@@ -25,11 +26,12 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="#0f0"
+        android:background="#0aa"
         android:text="@string/myScores"
         android:textColor="#FFF"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="MyScoresBtnClick"/>
 
     <Button
         android:id="@+id/allScoresButton"
@@ -37,9 +39,10 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="#00f"
+        android:background="#00a"
         android:text="@string/allScores"
         android:textColor="#FFF"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="AllScoresBtnClick"/>
 </LinearLayout>
