@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kviz</string>
+    <string name="username">Korisničko ime</string>
+    <string name="email">Email</string>
+    <string name="password">Lozinka</string>
+    <string name="confirm_password">Potvrdi Lozinku</string>
+    <string name="register">Registriraj se</string>
+</resources>
