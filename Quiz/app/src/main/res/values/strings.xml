@@ -8,4 +8,8 @@
     <string name="login">Login</string>
     <string name="alreadyHaveAnAcc">Already have an account?</string>
     <string name="dontHaveAnAcc">Don\'t have an account?</string>
+    <string name="logout">Logout</string>
+    <string name="play">Play!</string>
+    <string name="myScores">My Scores</string>
+    <string name="allScores">All Scores</string>
 </resources>

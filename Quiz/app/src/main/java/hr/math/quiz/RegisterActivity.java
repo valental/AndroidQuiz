@@ -11,6 +11,14 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        PreferencesManager preferencesManager = new PreferencesManager(this);
+        String username = preferencesManager.LoadUsername();
+        if (username != "")
+        {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void OpenLogin(View view) {
