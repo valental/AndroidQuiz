@@ -4,7 +4,7 @@
     <string name="username">Korisničko ime</string>
     <string name="email">Email</string>
     <string name="password">Lozinka</string>
-    <string name="confirm_password">Potvrdi Lozinku</string>
+    <string name="confirm_password">Potvrdi lozinku</string>
     <string name="register">Registriraj se</string>
     <string name="login">Ulogiraj se</string>
     <string name="alreadyHaveAnAcc">Već imaš račun?</string>
