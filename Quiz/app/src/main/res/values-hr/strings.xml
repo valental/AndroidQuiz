@@ -6,4 +6,7 @@
     <string name="password">Lozinka</string>
     <string name="confirm_password">Potvrdi Lozinku</string>
     <string name="register">Registriraj se</string>
+    <string name="login">Ulogiraj se</string>
+    <string name="alreadyHaveAnAcc">Već imaš račun?</string>
+    <string name="dontHaveAnAcc">Nemaš račun?</string>
 </resources>
