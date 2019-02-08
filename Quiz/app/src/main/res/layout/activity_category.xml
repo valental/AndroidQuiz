@@ -10,77 +10,113 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/filmButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#a00"
-            android:text="@string/film"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:onClick="FilmBtnClick"/>
 
-        <Button
-            android:id="@+id/geographyButton"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:background="#aa0"
-            android:text="@string/geography"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:onClick="GeographyBtnClick"/>
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/filmButton"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="#a00"
+                android:onClick="FilmBtnClick"
+                android:padding="10dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/movies"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:clickable="true"
+                android:onClick="FilmBtnClick"
+                android:text="@string/film"
+                android:textAlignment="center"
+                android:paddingRight="20dp"
+                android:textColor="#FFF"
+                android:textSize="33sp"
+                android:textStyle="bold"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/geographyButton"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="#aa0"
+                android:onClick="GeographyBtnClick"
+                android:padding="10dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/geography"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|right|center"
+                android:clickable="true"
+                android:onClick="GeographyBtnClick"
+                android:paddingLeft="20dp"
+                android:text="@string/geography"
+                android:textColor="#FFF"
+                android:textSize="33sp"
+                android:textStyle="bold"/>
+        </FrameLayout>
+
 
         <Button
             android:id="@+id/historyAndArtButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:background="#0a0"
+            android:drawableLeft="@drawable/history"
+            android:onClick="HistoryAndArtBtnClick"
+            android:paddingLeft="20dp"
             android:text="@string/historyAndArt"
             android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:onClick="HistoryAndArtBtnClick"/>
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/sportButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:background="#0aa"
+            android:onClick="SportBtnClick"
             android:text="@string/sport"
             android:textColor="#FFF"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:onClick="SportBtnClick"/>
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/scienceButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:background="#00a"
+            android:onClick="ScienceBtnClick"
             android:text="@string/science"
             android:textColor="#FFF"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:onClick="ScienceBtnClick"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 </LinearLayout>

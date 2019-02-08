@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
+    android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
     <Button
@@ -13,12 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#00a"
+        android:background="#8c4544"
+        android:drawableLeft="@drawable/play"
+        android:paddingLeft="20dp"
+        android:onClick="PlayBtnClick"
         android:text="@string/play"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:onClick="PlayBtnClick"/>
+        android:textColor="@color/plainText"
+        android:textSize="30sp"
+
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/myScoresButton"
@@ -26,12 +30,13 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="#0aa"
         android:text="@string/myScores"
-        android:textColor="#FFF"
+
+        android:textColor="@color/plainText"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:onClick="MyScoresBtnClick"/>
+        android:onClick="MyScoresBtnClick"
+        android:background="#58233a"/>
 
     <Button
         android:id="@+id/allScoresButton"
@@ -39,10 +44,13 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="#00a"
         android:text="@string/allScores"
-        android:textColor="#FFF"
+        android:textColor="@color/plainText"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:onClick="AllScoresBtnClick"/>
+        android:onClick="AllScoresBtnClick"
+        android:background="#8c4544"
+        android:drawableLeft="@drawable/stat"
+        android:paddingLeft="20dp"
+        android:radius="20dp"/>
 </LinearLayout>
