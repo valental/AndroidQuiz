@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.regex.Pattern;
-
 public class RegisterActivity extends AppCompatActivity {
 
     @Override
@@ -50,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
             usernameET.setBackgroundColor(Color.TRANSPARENT);
         } else {
             usernameET.setBackgroundColor(colorFailed);
-            MakeToast("Invalid username");
+            MakeToastShort(R.string.usernameError);
             validationSucceful = false;
         }
 
@@ -58,7 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
             emailET.setBackgroundColor(Color.TRANSPARENT);
         } else {
             emailET.setBackgroundColor(colorFailed);
-            MakeToast("Invalid email");
+            MakeToastShort(R.string.emailError);
             validationSucceful = false;
         }
 
@@ -66,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
             passwordET.setBackgroundColor(Color.TRANSPARENT);
         } else {
             passwordET.setBackgroundColor(colorFailed);
-            MakeToast("Password must be at least 8 characters with at least 1 letter and 1 number.");
+            MakeToastShort(R.string.passwordError);
             validationSucceful = false;
         }
 
@@ -74,18 +72,35 @@ public class RegisterActivity extends AppCompatActivity {
             confirmPassET.setBackgroundColor(Color.TRANSPARENT);
         } else {
             confirmPassET.setBackgroundColor(colorFailed);
-            MakeToast("Passwords do not match.");
+            MakeToastShort(R.string.confirmPassError);
             validationSucceful = false;
         }
-        if (validationSucceful == false) return;
 
+        if (validationSucceful == false) return;
         // Validation successful
 
+        Boolean registrationSuccessful = true;
 
+        // TODO make a request to the server
+
+        if (registrationSuccessful) {
+            MakeToastLong(R.string.confirmRegistration);
+            Intent intent = new Intent(this, LoginActivity.class);
+            finish();
+            startActivity(intent);
+        }
     }
 
-    private void MakeToast(String s) {
+    private void MakeToastShort(int id) {
+        String s = getResources().getString(id);
         Toast toast = Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    private void MakeToastLong(int id) {
+        String s = getResources().getString(id);
+        Toast toast = Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }

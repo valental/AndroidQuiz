@@ -18,4 +18,9 @@
     <string name="sport">Sport</string>
     <string name="science">Znanost</string>
     <string name="geography">Geografija</string>
+    <string name="usernameError">Neispravno korisničko ime</string>
+    <string name="emailError">Neispravan email</string>
+    <string name="passwordError">Lozinka mora imati barem 8 znakova i od toga barem 1 slovo i 1 broj</string>
+    <string name="confirmPassError">Lozinke se ne podudaraju</string>
+    <string name="confirmRegistration">Email je poslana na vašu email adresu. Potvrdite registraciju i prijavite se. </string>
 </resources>

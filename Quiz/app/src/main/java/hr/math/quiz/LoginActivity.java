@@ -1,11 +1,15 @@
 package hr.math.quiz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -16,12 +20,41 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void Login(View view) {
-        // if login successful
-        if (true)
-        {
+        EditText usernameET = (EditText) findViewById(R.id.usernameEditText);
+        EditText passwordET = (EditText) findViewById(R.id.passwordEditText);
+
+        String username = usernameET.getText().toString();
+        String password = passwordET.getText().toString();
+        Boolean validationSucceful = true;
+        ValidationHelper validator = new ValidationHelper();
+        int colorFailed = ContextCompat.getColor(getApplicationContext(), R.color.colorFailedValidation);
+
+        if (validator.ValidateUsername(username)) {
+            usernameET.setBackgroundColor(Color.TRANSPARENT);
+        } else {
+            usernameET.setBackgroundColor(colorFailed);
+            MakeToastShort(R.string.usernameError);
+            validationSucceful = false;
+        }
+
+        if (validator.ValidatePassword(password)) {
+            passwordET.setBackgroundColor(Color.TRANSPARENT);
+        } else {
+            passwordET.setBackgroundColor(colorFailed);
+            MakeToastShort(R.string.passwordError);
+            validationSucceful = false;
+        }
+
+        if (validationSucceful == false) return;
+        // Validation successful
+
+        Boolean loginSuccessful = true;
+
+        // TODO make a request to the server
+
+        if (loginSuccessful) {
             PreferencesManager preferencesManager = new PreferencesManager(this);
-            EditText editText = (EditText) findViewById(R.id.usernameEditText);
-            preferencesManager.SaveUsername(editText.getText().toString());
+            preferencesManager.SaveUsername(username);
             Intent intent = new Intent(this, MainActivity.class);
             finish();
             startActivity(intent);
@@ -31,5 +64,12 @@ public class LoginActivity extends AppCompatActivity {
     public void OpenRegister(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
+    }
+
+    private void MakeToastShort(int id) {
+        String s = getResources().getString(id);
+        Toast toast = Toast.makeText(getApplicationContext(), s, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 }
