@@ -4,6 +4,7 @@ import io.objectbox.annotation.Convert;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 import io.objectbox.converter.PropertyConverter;
+import io.objectbox.relation.ToOne;
 
 @Entity
 public class Question {
@@ -13,18 +14,26 @@ public class Question {
     public int type;
     public int correctAnswer;
 
+    public long questionHRId;
+    public long questionENId;
+
+    public ToOne<QuestionHR> questionHR;
+    public ToOne<QuestionEN> questionEN;
+
     @Convert(converter = CategoryConverter.class, dbType = Integer.class)
     public Category category;
 
     public Question(){
     }
 
-    public Question(long id, int level, int type, int correctAnswer, Category category) {
+    public Question(long id, int level, int type, int correctAnswer, Category category, long hrId, long enId) {
         this.id = id;
         this.level = level;
         this.type = type;
         this.correctAnswer = correctAnswer;
         this.category = category;
+        this.questionHR.setTargetId(hrId);
+        this.questionEN.setTargetId(enId);
     }
 
     public enum Category {
