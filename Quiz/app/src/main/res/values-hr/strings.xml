@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kviz</string>
+    <string name="username">Korisničko ime</string>
+    <string name="email">Email</string>
+    <string name="password">Lozinka</string>
+    <string name="confirm_password">Potvrdi lozinku</string>
+    <string name="register">Registriraj se</string>
+    <string name="login">Ulogiraj se</string>
+    <string name="alreadyHaveAnAcc">Već imaš račun?</string>
+    <string name="dontHaveAnAcc">Nemaš račun?</string>
+    <string name="logout">Odlogiraj se</string>
+    <string name="play">Igraj!</string>
+    <string name="myScores">Moji rezultati</string>
+    <string name="allScores">Svi rezultati</string>
+    <string name="film">Filmovi</string>
+    <string name="historyAndArt">Povijest i umjetnost</string>
+    <string name="sport">Sport</string>
+    <string name="science">Znanost</string>
+    <string name="geography">Geografija</string>
+</resources>

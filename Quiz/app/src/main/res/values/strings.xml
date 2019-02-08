@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="alreadyHaveAnAcc">Already have an account?</string>
+    <string name="dontHaveAnAcc">Don\'t have an account?</string>
+    <string name="logout">Logout</string>
+    <string name="play">Play!</string>
+    <string name="myScores">My Scores</string>
+    <string name="allScores">All Scores</string>
+    <string name="film">Film</string>
+    <string name="historyAndArt">History And Art</string>
+    <string name="sport">Sport</string>
+    <string name="science">Science</string>
+    <string name="geography">Geography</string>
 </resources>
