@@ -5,7 +5,7 @@ import io.objectbox.annotation.Id;
 
 @Entity
 public class QuestionEN {
-    @Id long id;
+    @Id(assignable = true) long id;
 
     public String text;
 

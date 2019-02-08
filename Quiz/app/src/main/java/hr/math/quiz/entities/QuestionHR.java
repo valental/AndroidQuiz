@@ -6,7 +6,7 @@ import io.objectbox.relation.ToOne;
 
 @Entity
 public class QuestionHR {
-    @Id long id;
+    @Id(assignable = true) long id;
 
     public String text;
 

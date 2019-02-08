@@ -8,7 +8,7 @@ import io.objectbox.relation.ToOne;
 
 @Entity
 public class Question {
-    @Id public long id;
+    @Id(assignable = true) public long id;
 
     public int level;
     public int type;
@@ -37,7 +37,7 @@ public class Question {
     }
 
     public enum Category {
-        DEFAULT(0), GEOGRAPHY(1), SPORT(2), MUSIC(3), HISTORY(4);
+        DEFAULT(0), GEOGRAPHY(1), SPORT(2), MOVIE(3), HISTORY_ART(4), SCIENCE(5);
 
         final int id;
 
