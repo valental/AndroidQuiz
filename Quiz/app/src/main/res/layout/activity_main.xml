@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/playButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:focusableInTouchMode="true"
-        tools:context=".MainActivity">
+        android:layout_weight="1"
+        android:background="#00a"
+        android:text="@string/play"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="PlayBtnClick"/>
 
-        <Button
-            android:id="@+id/playButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#f00"
-            android:text="@string/play"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-        <Button
-            android:id="@+id/myScoresButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:background="#0f0"
-            android:text="@string/myScores"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-        <Button
-            android:id="@+id/allScoresButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:background="#00f"
-            android:text="@string/allScores"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/myScoresButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#0aa"
+        android:text="@string/myScores"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="MyScoresBtnClick"/>
+
+    <Button
+        android:id="@+id/allScoresButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#00a"
+        android:text="@string/allScores"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="AllScoresBtnClick"/>
+</LinearLayout>

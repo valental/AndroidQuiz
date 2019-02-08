@@ -26,6 +26,11 @@ public class PreferencesManager {
         return LoadPreference("username");
     }
 
+    public void ClearPreferences()
+    {
+        SaveUsername("");
+    }
+
     private String LoadPreference(String key){
         SharedPreferences mySharedPreferences=context.getSharedPreferences(MYPREFS,mode);
         return mySharedPreferences.getString(key, "");

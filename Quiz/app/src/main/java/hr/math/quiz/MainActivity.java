@@ -30,14 +30,29 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item)
     {
         if (R.id.logout == item.getItemId()) {
-            Toast.makeText(this, "You clicked on Item 1", Toast.LENGTH_LONG).show();
+            PreferencesManager preferencesManager = new PreferencesManager(this);
+            preferencesManager.ClearPreferences();
+            Intent intent = new Intent(this, LoginActivity.class);
+            finish();
+            startActivity(intent);
+
             return true;
         }
         return false;
     }
 
-    public void ClearPreferences(View view) {
-        PreferencesManager preferencesManager = new PreferencesManager(this);
-        preferencesManager.SaveUsername("");
+    public void PlayBtnClick(View view) {
+        Intent intent = new Intent(this, CategoryActivity.class);
+        startActivity(intent);
+    }
+
+    public void MyScoresBtnClick(View view) {
+        Intent intent = new Intent(this, MyScoresActivity.class);
+        startActivity(intent);
+    }
+
+    public void AllScoresBtnClick(View view) {
+        Intent intent = new Intent(this, AllScoresActivity.class);
+        startActivity(intent);
     }
 }

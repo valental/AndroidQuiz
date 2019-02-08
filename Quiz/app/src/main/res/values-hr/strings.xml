@@ -13,4 +13,9 @@
     <string name="play">Igraj!</string>
     <string name="myScores">Moji rezultati</string>
     <string name="allScores">Svi rezultati</string>
+    <string name="film">Filmovi</string>
+    <string name="historyAndArt">Povijest i umjetnost</string>
+    <string name="sport">Sport</string>
+    <string name="science">Znanost</string>
+    <string name="geography">Geografija</string>
 </resources>
