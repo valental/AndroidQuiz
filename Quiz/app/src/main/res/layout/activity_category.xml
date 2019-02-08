@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CategoryActivity">
+    tools:context=".CategoryActivity"
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+
+        >
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -50,16 +53,28 @@
             android:layout_margin="5dp"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/sportButton"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_gravity="right"
                 android:background="@color/sportColor"
                 android:onClick="SportBtnClick"
+                android:padding="10dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/sports" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:clickable="true"
+                android:onClick="SportBtnClick"
+                android:paddingLeft="20dp"
                 android:text="@string/sport"
+                android:textAlignment="center"
                 android:textColor="#FFF"
-                android:textSize="20sp"
+                android:textSize="33sp"
                 android:textStyle="bold" />
         </FrameLayout>
 
@@ -69,17 +84,30 @@
             android:layout_margin="5dp"
             android:layout_weight="1">
 
-        <Button
-            android:id="@+id/scienceButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:background="@color/scienceColor"
-            android:onClick="ScienceBtnClick"
-            android:text="@string/science"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/scienceButton"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/scienceColor"
+                android:onClick="ScienceBtnClick"
+                android:padding="10dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/science" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:clickable="true"
+                android:onClick="ScienceBtnClick"
+                android:paddingRight="20dp"
+                android:text="@string/science"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="33sp"
+                android:textStyle="bold" />
+
         </FrameLayout>
 
         <FrameLayout
@@ -117,19 +145,31 @@
             android:layout_margin="5dp"
             android:layout_weight="1">
 
-            <Button
+            <ImageButton
                 android:id="@+id/historyAndArtButton"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_gravity="left"
                 android:background="@color/historyAndArtColor"
-                android:drawableLeft="@drawable/history"
                 android:onClick="HistoryAndArtBtnClick"
-                android:paddingLeft="20dp"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/history" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:clickable="true"
+                android:onClick="HistoryAndArtBtnClick"
+                android:paddingRight="20dp"
                 android:text="@string/historyAndArt"
+                android:textAlignment="center"
                 android:textColor="#FFF"
-                android:textSize="25sp"
+                android:textSize="33sp"
                 android:textStyle="bold" />
+
         </FrameLayout>
 
     </LinearLayout>
