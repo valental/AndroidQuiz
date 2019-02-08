@@ -12,6 +12,11 @@
     <color name="plainText">#FFE4E1</color>
     <color name="buttonColor1">#008080</color>
     <color name="buttonColor2">#483D8B</color>
+    <color name="moviesColor">#0000AA</color>
+    <color name="sportColor">#00AAAA</color>
+    <color name="scienceColor">#00AA00</color>
+    <color name="geographyColor">#AAAA00</color>
+    <color name="historyAndArtColor">#AA0000</color>
 
 
     <color name="White">#FFFFFF</color>
