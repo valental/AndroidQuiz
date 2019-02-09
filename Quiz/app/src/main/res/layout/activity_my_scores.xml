@@ -4,10 +4,230 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
     tools:context=".MyScoresActivity">
 
-    <Button
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ovo je my scores"/>
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/film" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/filmProgressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:max="3" />
+
+            <TextView
+                android:id="@+id/moviesProgressBarText"
+                android:layout_alignLeft="@id/filmProgressBar"
+                android:layout_alignTop="@id/filmProgressBar"
+                android:layout_alignRight="@id/filmProgressBar"
+                android:layout_alignBottom="@id/filmProgressBar"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="#00000000"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_alignEnd="@id/filmProgressBar"
+                android:layout_alignStart="@id/filmProgressBar" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sport" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/sportProgressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:max="3" />
+
+            <TextView
+                android:id="@+id/sportProgressBarText"
+                android:layout_alignLeft="@id/sportProgressBar"
+                android:layout_alignTop="@id/sportProgressBar"
+                android:layout_alignRight="@id/sportProgressBar"
+                android:layout_alignBottom="@id/sportProgressBar"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="#00000000"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_alignEnd="@id/sportProgressBar"
+                android:layout_alignStart="@id/sportProgressBar" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/science" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/scienceProgressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:max="3" />
+
+            <TextView
+                android:id="@+id/scienceProgressBarText"
+                android:layout_alignLeft="@id/scienceProgressBar"
+                android:layout_alignTop="@id/scienceProgressBar"
+                android:layout_alignRight="@id/scienceProgressBar"
+                android:layout_alignBottom="@id/scienceProgressBar"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="#00000000"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_alignStart="@id/scienceProgressBar"
+                android:layout_alignEnd="@id/scienceProgressBar" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/geography" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/geographyProgressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:max="3" />
+
+            <TextView
+                android:id="@+id/geographyProgressBarText"
+                android:layout_alignLeft="@id/geographyProgressBar"
+                android:layout_alignTop="@id/geographyProgressBar"
+                android:layout_alignRight="@id/geographyProgressBar"
+                android:layout_alignBottom="@id/geographyProgressBar"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="#00000000"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_alignStart="@id/geographyProgressBar"
+                android:layout_alignEnd="@id/geographyProgressBar" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/historyAndArt" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/historyAndArtProgressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:max="3" />
+
+            <TextView
+                android:id="@+id/historyAndArtProgressBarText"
+                android:layout_alignLeft="@id/historyAndArtProgressBar"
+                android:layout_alignTop="@id/historyAndArtProgressBar"
+                android:layout_alignRight="@id/historyAndArtProgressBar"
+                android:layout_alignBottom="@id/historyAndArtProgressBar"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="#00000000"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_alignEnd="@id/historyAndArtProgressBar"
+                android:layout_alignStart="@id/historyAndArtProgressBar" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 </LinearLayout>
