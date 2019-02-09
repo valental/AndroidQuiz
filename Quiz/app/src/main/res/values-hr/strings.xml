@@ -28,4 +28,5 @@
     <string name="email_not_confirmed">Email još nije potvrđen.</string>
     <string name="password_incorrect">Lozinka je neispravna.</string>
     <string name="login_not_available">Login trenutno nedostupan.</string>
+    <string name="registration_unavailable">Registration currently unavailable.</string>
 </resources>

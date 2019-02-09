@@ -27,7 +27,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         PreferencesManager preferencesManager = new PreferencesManager(this);
         String username = preferencesManager.LoadUsername();
-        if (username != "") {
+
+        if (!username.isEmpty()) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
@@ -48,32 +49,32 @@ public class RegisterActivity extends AppCompatActivity {
         String email = emailET.getText().toString();
         String password = passwordET.getText().toString();
         String confirmPass = confirmPassET.getText().toString();
-        Boolean validationSucceful = true;
-        ValidationHelper validator = new ValidationHelper();
+        boolean validationSuccessful = true;
+
         int colorFailed = ContextCompat.getColor(getApplicationContext(), R.color.colorFailedValidation);
 
-        if (validator.ValidateUsername(username)) {
+        if (ValidationHelper.ValidateUsername(username)) {
             usernameET.setBackgroundColor(Color.TRANSPARENT);
         } else {
             usernameET.setBackgroundColor(colorFailed);
             MakeToastShort(R.string.usernameError);
-            validationSucceful = false;
+            validationSuccessful = false;
         }
 
-        if (validator.ValidateEmail(email)) {
+        if (ValidationHelper.ValidateEmail(email)) {
             emailET.setBackgroundColor(Color.TRANSPARENT);
         } else {
             emailET.setBackgroundColor(colorFailed);
             MakeToastShort(R.string.emailError);
-            validationSucceful = false;
+            validationSuccessful = false;
         }
 
-        if (validator.ValidatePassword(password)) {
+        if (ValidationHelper.ValidatePassword(password)) {
             passwordET.setBackgroundColor(Color.TRANSPARENT);
         } else {
             passwordET.setBackgroundColor(colorFailed);
             MakeToastShort(R.string.passwordError);
-            validationSucceful = false;
+            validationSuccessful = false;
         }
 
         if (password.equals(confirmPass)) {
@@ -81,10 +82,10 @@ public class RegisterActivity extends AppCompatActivity {
         } else {
             confirmPassET.setBackgroundColor(colorFailed);
             MakeToastShort(R.string.confirmPassError);
-            validationSucceful = false;
+            validationSuccessful = false;
         }
 
-        if (validationSucceful == false) return;
+        if (validationSuccessful == false) return;
         // Validation successful
 
         registrationCall(email, username, password);
@@ -126,7 +127,6 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.code() == 201) {
-                    User newUser = response.body();
                     finishRegistration();
                 } else {
                     try {
@@ -134,14 +134,14 @@ public class RegisterActivity extends AppCompatActivity {
                         JSONObject errors = error.getJSONObject("errors");
                         MakeToastLong(errors.names().join(", ") + getString(R.string.already_taken));
                     } catch (Exception e) {
-                        MakeToastLong(e.getMessage());
+                        MakeToastLong(R.string.registration_unavailable);
                     }
                 }
             }
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
-                MakeToastLong(getString(R.string.connection_not_established));
+                MakeToastLong(R.string.connection_not_established);
             }
         });
     }

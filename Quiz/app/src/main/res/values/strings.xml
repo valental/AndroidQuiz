@@ -27,4 +27,5 @@
     <string name="email_not_confirmed">Email has not been confirmed</string>
     <string name="password_incorrect">Password is incorrect.</string>
     <string name="login_not_available">Login not available at the moment.</string>
+    <string name="registration_unavailable">Registration currently unavailable.</string>
 </resources>
