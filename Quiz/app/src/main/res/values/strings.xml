@@ -17,4 +17,9 @@
     <string name="sport">Sport</string>
     <string name="science">Science</string>
     <string name="geography">Geography</string>
+    <string name="usernameError">Invalid username</string>
+    <string name="emailError">Invalid email</string>
+    <string name="passwordError">Password must be at least 8 characters with at least 1 letter and 1 number</string>
+    <string name="confirmPassError">Passwords do not match</string>
+    <string name="confirmRegistration">An email has been sent to your email address. Please confirm the registration and log in. </string>
 </resources>
