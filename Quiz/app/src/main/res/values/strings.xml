@@ -14,6 +14,7 @@
     <string name="allScores">All Scores</string>
     <string name="film">Movies</string>
     <string name="historyAndArt">History And Art</string>
+    <string name="historyBreakAndArt">History\nAnd Art</string>
     <string name="sport">Sport</string>
     <string name="science">Science</string>
     <string name="geography">Geography</string>
