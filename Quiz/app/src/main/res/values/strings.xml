@@ -24,4 +24,7 @@
     <string name="confirmRegistration">An email has been sent to your email address. Please confirm the registration and log in. </string>
     <string name="already_taken">: has already been taken.</string>
     <string name="connection_not_established">Connection to the server could not be established.</string>
+    <string name="email_not_confirmed">Email has not been confirmed</string>
+    <string name="password_incorrect">Password is incorrect.</string>
+    <string name="login_not_available">Login not available at the moment.</string>
 </resources>

@@ -25,4 +25,7 @@
     <string name="confirmRegistration">Email je poslana na vašu email adresu. Potvrdite registraciju i prijavite se. </string>
     <string name="already_taken">: već je zauzeto.</string>
     <string name="connection_not_established">Spajanje na server nije uspjelo.</string>
+    <string name="email_not_confirmed">Email još nije potvrđen.</string>
+    <string name="password_incorrect">Lozinka je neispravna.</string>
+    <string name="login_not_available">Login trenutno nedostupan.</string>
 </resources>

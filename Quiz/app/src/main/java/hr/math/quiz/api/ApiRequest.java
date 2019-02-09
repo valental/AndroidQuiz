@@ -1,6 +1,7 @@
 package hr.math.quiz.api;
 
 
+import hr.math.quiz.api.models.Session;
 import hr.math.quiz.api.models.User;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -20,5 +21,11 @@ public class ApiRequest {
         Call<User> createCall = service.create(user);
 
         return createCall;
+    }
+
+    public static Call<Session> startSession(Session session) {
+        Call<Session> sessionCall = service.create(session);
+
+        return sessionCall;
     }
 }
