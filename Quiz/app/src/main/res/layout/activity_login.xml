@@ -18,10 +18,11 @@
         <android.support.design.widget.TextInputLayout
             android:id="@+id/usernameTextInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="match_parent"
             android:textColorHint="@color/colorTextHint"
             android:hint="@string/username"
-            android:backgroundTint="@color/plainText"
+            android:backgroundTint="@color/white"
+            android:layout_margin="4dp"
             >
             <EditText
                 android:id="@+id/usernameEditText"
@@ -29,7 +30,9 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/colorTextHint"
                 android:textSize="23dp"
-                android:backgroundTint="@color/plainText"
+                android:backgroundTint="@color/white"
+                android:focusable="true"
+                android:layout_margin="4dp"
                 />
         </android.support.design.widget.TextInputLayout>
 
@@ -39,7 +42,8 @@
             android:layout_height="match_parent"
             android:textColorHint="@color/colorTextHint"
             android:hint="@string/password"
-            android:backgroundTint="@color/plainText"
+            android:backgroundTint="@color/white"
+            android:layout_margin="2dp"
             >
             <EditText
                 android:id="@+id/passwordEditText"
@@ -48,7 +52,9 @@
                 android:textColor="@color/colorTextHint"
                 android:textSize="23dp"
                 android:inputType="textPassword"
-                android:backgroundTint="@color/plainText"/>
+                android:focusable="true"
+                android:backgroundTint="@color/white"
+                android:layout_margin="4dp"/>
         </android.support.design.widget.TextInputLayout>
 
         <Button
