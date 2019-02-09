@@ -24,4 +24,5 @@
     <string name="confirmPassError">Lozinke se ne podudaraju</string>
     <string name="confirmRegistration">Email je poslana na vašu email adresu. Potvrdite registraciju i prijavite se. </string>
     <string name="home">Početna stranica</string>
+    <string name="bestPlayers">Najbolji igrači</string>
 </resources>

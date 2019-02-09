@@ -12,7 +12,7 @@
     <string name="play">Play!</string>
     <string name="myScores">My Scores</string>
     <string name="allScores">All Scores</string>
-    <string name="film">Film</string>
+    <string name="film">Movies</string>
     <string name="historyAndArt">History And Art</string>
     <string name="sport">Sport</string>
     <string name="science">Science</string>
@@ -23,4 +23,5 @@
     <string name="confirmPassError">Passwords do not match</string>
     <string name="confirmRegistration">An email has been sent to your email address. Please confirm the registration and log in. </string>
     <string name="home">Home</string>
+    <string name="bestPlayers">Best Players</string>
 </resources>
