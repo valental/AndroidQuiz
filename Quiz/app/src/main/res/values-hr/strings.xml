@@ -15,6 +15,7 @@
     <string name="allScores">Svi rezultati</string>
     <string name="film">Filmovi</string>
     <string name="historyAndArt">Povijest i umjetnost</string>
+    <string name="historyBreakAndArt">Povijest\ni umjetnost</string>
     <string name="sport">Sport</string>
     <string name="science">Znanost</string>
     <string name="geography">Geografija</string>
@@ -23,6 +24,6 @@
     <string name="passwordError">Lozinka mora imati barem 8 znakova i od toga barem 1 slovo i 1 broj</string>
     <string name="confirmPassError">Lozinke se ne podudaraju</string>
     <string name="confirmRegistration">Email je poslana na vašu email adresu. Potvrdite registraciju i prijavite se. </string>
-    <string name="home">Početna stranica</string>
+    <string name="home">Početna</string>
     <string name="bestPlayers">Najbolji igrači</string>
 </resources>

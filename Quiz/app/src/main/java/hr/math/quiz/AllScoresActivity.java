@@ -1,8 +1,11 @@
 package hr.math.quiz;
 
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuBuilder;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -47,11 +50,13 @@ public class AllScoresActivity extends AppCompatActivity {
             TextView position = new TextView(this);
             position.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT));
             position.setText(Integer.toString(i+1) + ". ");
+            position.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 23);
             linearLayout.addView(position);
 
             TextView player = new TextView(this);
             player.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
             player.setText(players[i]);
+            player.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 23);
             linearLayout.addView(player);
 
             innerContainer.addView(linearLayout);
@@ -60,6 +65,9 @@ public class AllScoresActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        if (menu instanceof MenuBuilder) {
+            ((MenuBuilder) menu).setOptionalIconsVisible(true);
+        }
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.general_menu, menu);
