@@ -7,9 +7,9 @@
     android:background="@color/colorBackground">
 
     <LinearLayout
+        android:id="@+id/registerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:focusableInTouchMode="true"
         android:orientation="vertical"
         tools:context=".MainActivity">
