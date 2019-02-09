@@ -22,4 +22,5 @@
     <string name="passwordError">Password must be at least 8 characters with at least 1 letter and 1 number</string>
     <string name="confirmPassError">Passwords do not match</string>
     <string name="confirmRegistration">An email has been sent to your email address. Please confirm the registration and log in. </string>
+    <string name="home">Home</string>
 </resources>

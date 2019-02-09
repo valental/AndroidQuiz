@@ -23,4 +23,5 @@
     <string name="passwordError">Lozinka mora imati barem 8 znakova i od toga barem 1 slovo i 1 broj</string>
     <string name="confirmPassError">Lozinke se ne podudaraju</string>
     <string name="confirmRegistration">Email je poslana na vašu email adresu. Potvrdite registraciju i prijavite se. </string>
+    <string name="home">Početna stranica</string>
 </resources>

@@ -60,21 +60,24 @@ public class MyScoresActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_activity_menu, menu);
+        inflater.inflate(R.menu.general_menu, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        if (R.id.logout == item.getItemId()) {
-            PreferencesManager preferencesManager = new PreferencesManager(this);
-            preferencesManager.ClearPreferences();
-            Intent intent = new Intent(this, LoginActivity.class);
-            finish();
-            startActivity(intent);
-
-            return true;
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.logout:
+                PreferencesManager preferencesManager = new PreferencesManager(this);
+                preferencesManager.ClearPreferences();
+                Intent intentLogin = new Intent(this, LoginActivity.class);
+                finish();
+                startActivity(intentLogin);
+                return true;
+            case R.id.home:
+                Intent intentHome = new Intent(this, MainActivity.class);
+                startActivity(intentHome);
+                return true;
         }
         return false;
     }
