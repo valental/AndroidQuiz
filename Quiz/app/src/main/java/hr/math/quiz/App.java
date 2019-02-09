@@ -31,10 +31,6 @@ public class App extends Application {
         Box<QuestionHR> questionHRBox = boxStore.boxFor(QuestionHR.class);
         Box<QuestionEN> questionENBox = boxStore.boxFor(QuestionEN.class);
 
-        questionBox.removeAll();
-        questionHRBox.removeAll();
-        questionENBox.removeAll();
-
         QuestionHR qhr;
         QuestionEN qen;
         Question question;

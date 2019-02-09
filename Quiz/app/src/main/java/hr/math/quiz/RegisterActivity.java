@@ -10,6 +10,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import hr.math.quiz.api.ApiRequest;
+import hr.math.quiz.api.models.User;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class RegisterActivity extends AppCompatActivity {
 
     @Override
@@ -79,16 +87,14 @@ public class RegisterActivity extends AppCompatActivity {
         if (validationSucceful == false) return;
         // Validation successful
 
-        Boolean registrationSuccessful = true;
+        registrationCall(email, username, password);
+    }
 
-        // TODO make a request to the server
-
-        if (registrationSuccessful) {
-            MakeToastLong(R.string.confirmRegistration);
-            Intent intent = new Intent(this, LoginActivity.class);
-            finish();
-            startActivity(intent);
-        }
+    private void finishRegistration() {
+        MakeToastLong(R.string.confirmRegistration);
+        Intent intent = new Intent(this, LoginActivity.class);
+        finish();
+        startActivity(intent);
     }
 
     private void MakeToastShort(int id) {
@@ -98,10 +104,45 @@ public class RegisterActivity extends AppCompatActivity {
         toast.show();
     }
 
+    private void MakeToastLong(String message) {
+        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
     private void MakeToastLong(int id) {
         String s = getResources().getString(id);
         Toast toast = Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
+    }
+
+    private void registrationCall(String email, String username, String password) {
+        User user = new User(email, username, password);
+
+        Call<User> createCall = ApiRequest.createUser(user);
+
+        createCall.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                if(response.code() == 201) {
+                    User newUser = response.body();
+                    finishRegistration();
+                } else {
+                    try {
+                        JSONObject error = new JSONObject(response.errorBody().string());
+                        JSONObject errors = error.getJSONObject("errors");
+                        MakeToastLong(errors.names().join(", ") + getString(R.string.already_taken));
+                    } catch (Exception e) {
+                        MakeToastLong(e.getMessage());
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                MakeToastLong(getString(R.string.connection_not_established));
+            }
+        });
     }
 }
