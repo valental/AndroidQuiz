@@ -1,6 +1,7 @@
 package hr.math.quiz;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,8 +28,8 @@ public class MyScoresActivity extends AppCompatActivity {
         // TODO query progress from the db
         int moviesLvl = 1;
         int sportLvl = 2;
-        int scienceLvl = 0;
-        int geographyLvl = 3;
+        int scienceLvl = 1;
+        int geographyLvl = 2;
         int historyAndArtLvl = 2;
 
         ProgressBar moviesPB = findViewById(R.id.filmProgressBar);
@@ -54,6 +55,7 @@ public class MyScoresActivity extends AppCompatActivity {
         sciencePBText.setText(Integer.toString(scienceLvl) + lvls);
         geographyPBText.setText(Integer.toString(geographyLvl) + lvls);
         historyAndArtPBText.setText(Integer.toString(historyAndArtLvl) + lvls);
+
     }
 
     @Override

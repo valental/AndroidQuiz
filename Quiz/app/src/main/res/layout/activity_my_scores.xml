@@ -22,7 +22,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/film" />
+            android:text="@string/film"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -32,8 +34,12 @@
                 android:id="@+id/filmProgressBar"
                 style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:max="3" />
+                android:layout_height="40dp"
+                android:max="3"
+                android:progressTint="@color/moviesColor"
+                android:progressBackgroundTint="@color/moviesColorLight"
+
+/>
 
             <TextView
                 android:id="@+id/moviesProgressBarText"
@@ -43,11 +49,14 @@
                 android:layout_alignBottom="@id/filmProgressBar"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:background="#00000000"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_alignEnd="@id/filmProgressBar"
-                android:layout_alignStart="@id/filmProgressBar" />
+                android:layout_alignStart="@id/filmProgressBar"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
         </RelativeLayout>
     </LinearLayout>
 
@@ -65,7 +74,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sport" />
+            android:text="@string/sport"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -75,8 +86,10 @@
                 android:id="@+id/sportProgressBar"
                 style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:max="3" />
+                android:layout_height="40dp"
+                android:max="3"
+                android:progressTint="@color/sportColor"
+                android:progressBackgroundTint="@color/sportColorLight"/>
 
             <TextView
                 android:id="@+id/sportProgressBarText"
@@ -86,11 +99,14 @@
                 android:layout_alignBottom="@id/sportProgressBar"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:background="#00000000"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_alignEnd="@id/sportProgressBar"
-                android:layout_alignStart="@id/sportProgressBar" />
+                android:layout_alignStart="@id/sportProgressBar"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
         </RelativeLayout>
 
     </LinearLayout>
@@ -109,7 +125,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/science" />
+            android:text="@string/science"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -119,8 +137,10 @@
                 android:id="@+id/scienceProgressBar"
                 style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:max="3" />
+                android:layout_height="40dp"
+                android:max="3"
+                android:progressTint="@color/scienceColor"
+                android:progressBackgroundTint="@color/scienceColorLight"/>
 
             <TextView
                 android:id="@+id/scienceProgressBarText"
@@ -130,11 +150,14 @@
                 android:layout_alignBottom="@id/scienceProgressBar"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:background="#00000000"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_alignStart="@id/scienceProgressBar"
-                android:layout_alignEnd="@id/scienceProgressBar" />
+                android:layout_alignEnd="@id/scienceProgressBar"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
         </RelativeLayout>
     </LinearLayout>
 
@@ -152,7 +175,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/geography" />
+            android:text="@string/geography"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -162,8 +187,10 @@
                 android:id="@+id/geographyProgressBar"
                 style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:max="3" />
+                android:layout_height="40dp"
+                android:max="3"
+                android:progressTint="@color/geographyColor"
+                android:progressBackgroundTint="@color/geographyColorLight"/>
 
             <TextView
                 android:id="@+id/geographyProgressBarText"
@@ -173,11 +200,14 @@
                 android:layout_alignBottom="@id/geographyProgressBar"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:background="#00000000"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_alignStart="@id/geographyProgressBar"
-                android:layout_alignEnd="@id/geographyProgressBar" />
+                android:layout_alignEnd="@id/geographyProgressBar"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
         </RelativeLayout>
 
     </LinearLayout>
@@ -196,7 +226,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/historyAndArt" />
+            android:text="@string/historyAndArt"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -206,8 +238,11 @@
                 android:id="@+id/historyAndArtProgressBar"
                 style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:max="3" />
+                android:layout_height="40dp"
+                android:max="3"
+                android:progressTint="@color/historyAndArtColor"
+                android:progressBackgroundTint="@color/historyAndArtColorLight"
+                />
 
             <TextView
                 android:id="@+id/historyAndArtProgressBarText"
@@ -217,11 +252,14 @@
                 android:layout_alignBottom="@id/historyAndArtProgressBar"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:background="#00000000"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_alignEnd="@id/historyAndArtProgressBar"
-                android:layout_alignStart="@id/historyAndArtProgressBar" />
+                android:layout_alignStart="@id/historyAndArtProgressBar"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
         </RelativeLayout>
 
     </LinearLayout>
