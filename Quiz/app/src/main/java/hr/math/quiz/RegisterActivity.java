@@ -33,10 +33,10 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void Register(View view) {
-        EditText usernameET = (EditText) findViewById(R.id.usernameEditText);
-        EditText emailET = (EditText) findViewById(R.id.emailEditText);
-        EditText passwordET = (EditText) findViewById(R.id.passwordEditText);
-        EditText confirmPassET = (EditText) findViewById(R.id.confirmPasswordEditText);
+        EditText usernameET = findViewById(R.id.usernameEditText);
+        EditText emailET = findViewById(R.id.emailEditText);
+        EditText passwordET = findViewById(R.id.passwordEditText);
+        EditText confirmPassET = findViewById(R.id.confirmPasswordEditText);
 
         String username = usernameET.getText().toString();
         String email = emailET.getText().toString();

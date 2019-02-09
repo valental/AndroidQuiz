@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/film"
                 android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
                     android:layout_alignEnd="@id/filmProgressBar"
                     android:layout_alignStart="@id/filmProgressBar"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textColor="@color/black"/>
             </RelativeLayout>
         </LinearLayout>
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/sport"
                 android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                     android:layout_alignEnd="@id/sportProgressBar"
                     android:layout_alignStart="@id/sportProgressBar"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textColor="@color/black"/>
             </RelativeLayout>
 
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/science"
                 android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -155,7 +155,7 @@
                     android:layout_alignStart="@id/scienceProgressBar"
                     android:layout_alignEnd="@id/scienceProgressBar"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textColor="@color/black"/>
             </RelativeLayout>
         </LinearLayout>
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/geography"
                 android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -201,7 +201,7 @@
                     android:layout_alignStart="@id/geographyProgressBar"
                     android:layout_alignEnd="@id/geographyProgressBar"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textColor="@color/black"/>
             </RelativeLayout>
 
@@ -233,7 +233,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/historyAndArt"
                 android:textStyle="bold"
-                android:textSize="20dp"
+                android:textSize="20sp"
 />
 
             <RelativeLayout
@@ -263,7 +263,7 @@
                     android:layout_alignStart="@id/historyAndArtProgressBar"
                     android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="20dp"/>
+                    android:textSize="20sp"/>
             </RelativeLayout>
 
         </LinearLayout>

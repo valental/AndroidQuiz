@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="contentDescription"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
@@ -21,14 +22,14 @@
             android:id="@+id/playButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="left"
             android:background="@color/historyAndArtColor"
             android:onClick="PlayBtnClick"
             android:padding="10dp"
             android:paddingLeft="20dp"
             android:scaleType="fitStart"
-            android:src="@drawable/play2" />
+            android:src="@drawable/play2"
+            android:paddingStart="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,7 +42,9 @@
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="33sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:focusable="true"
+            android:paddingEnd="70dp" />
     </FrameLayout>
 
     <FrameLayout
@@ -54,14 +57,14 @@
             android:id="@+id/myScoresButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="left"
             android:background="@color/geographyColor"
             android:onClick="MyScoresBtnClick"
             android:padding="10dp"
             android:paddingLeft="20dp"
             android:scaleType="fitStart"
-            android:src="@drawable/score2" />
+            android:src="@drawable/score2"
+            android:paddingStart="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -74,7 +77,9 @@
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="33sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:focusable="true"
+            android:paddingEnd="20dp" />
     </FrameLayout>
 
 
@@ -88,14 +93,14 @@
             android:id="@+id/allScoresButtonScoresButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="left"
             android:background="@color/scienceColor"
             android:onClick="AllScoresBtnClick"
             android:padding="10dp"
             android:paddingLeft="20dp"
             android:scaleType="fitStart"
-            android:src="@drawable/stat2" />
+            android:src="@drawable/stat2"
+            android:paddingStart="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -108,7 +113,9 @@
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="33sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:focusable="true"
+            android:paddingEnd="20dp" />
     </FrameLayout>
 
 </LinearLayout>
