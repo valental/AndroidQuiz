@@ -5,16 +5,12 @@
   "entities": [
     {
       "id": "1:3274608581590621070",
-      "lastPropertyId": "4:7896726398441086315",
+      "lastPropertyId": "5:3230581708370492576",
       "name": "Progress",
       "properties": [
         {
           "id": "1:829738983838821259",
           "name": "id"
-        },
-        {
-          "id": "2:2764801801346112703",
-          "name": "userId"
         },
         {
           "id": "3:1516122996780769177",
@@ -23,6 +19,10 @@
         {
           "id": "4:7896726398441086315",
           "name": "currentLevel"
+        },
+        {
+          "id": "5:3230581708370492576",
+          "name": "username"
         }
       ],
       "relations": []
@@ -138,7 +138,9 @@
   "modelVersionParserMinimum": 4,
   "retiredEntityUids": [],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    2764801801346112703
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

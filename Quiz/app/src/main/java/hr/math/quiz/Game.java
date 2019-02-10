@@ -25,6 +25,7 @@ public class Game {
     public void setQuestions(List<Question> questions) {
         this.questions = questions;
         answersInt = new ArrayList<Integer>();
+        answersString = new ArrayList<String>();
         currentQuestion = -1;
     }
 
@@ -41,5 +42,9 @@ public class Game {
     public Question getNextQuestion() {
         currentQuestion++;
         return currentQuestion < questions.size() ? questions.get(currentQuestion) : null;
+    }
+
+    public Question getCurrentQuestion() {
+        return (0 <= currentQuestion && currentQuestion < questions.size()) ? questions.get(currentQuestion) : null;
     }
 }

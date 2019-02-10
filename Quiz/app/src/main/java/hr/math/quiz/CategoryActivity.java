@@ -9,6 +9,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import hr.math.quiz.entities.Progress;
 import hr.math.quiz.entities.Question;
 import io.objectbox.Box;
@@ -49,10 +52,31 @@ public class CategoryActivity extends AppCompatActivity {
         Box<Progress> progressBox = ((App)getApplication()).getBoxStore().boxFor(Progress.class);
         //progressBox.
 
-        //game.setQuestions();
+        // TODO set correct questions
+        game.setQuestions(new ArrayList<Question>());
 
-        //Intent in = new Intent(this, QuestionSelectActivity.class);
-        //startActivity(in);
+        Question question = game.getNextQuestion();
+        Intent intent;
+        if (question == null) {
+            // no more questions
+            intent = new Intent(this, GameFinishedActivity.class);
+        } else {
+            // next question
+            switch (question.type) {
+                case 0:
+                    intent = new Intent(this, QuestionSelectActivity.class);
+                    break;
+                case 1:
+                    intent = new Intent(this, QuestionInputActivity.class);
+                    break;
+                case 2:
+                    intent = new Intent(this, QuestionDropdownActivity.class);
+                    break;
+                default:
+                    return;
+            }
+        }
+        startActivity(intent);
     }
 
     @Override

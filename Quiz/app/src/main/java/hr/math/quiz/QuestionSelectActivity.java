@@ -1,5 +1,6 @@
 package hr.math.quiz;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import hr.math.quiz.entities.Question;
 
 public class QuestionSelectActivity extends AppCompatActivity {
 
+    Question myQuestion;
     ProgressBar progressBar;
     Handler handler = new Handler();
     long start = System.currentTimeMillis();
@@ -20,6 +22,13 @@ public class QuestionSelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_select);
 
+        Game game = Game.getInstance();
+        myQuestion = game.getCurrentQuestion();
+
+        ProgressBarSetup();
+    }
+
+    private void ProgressBarSetup(){
         progressBar = findViewById(R.id.questionProgressBar);
         progressBar.setMax(10000);
 
@@ -57,9 +66,34 @@ public class QuestionSelectActivity extends AppCompatActivity {
                 }
             }
         }).start();
-
     }
 
     private void OpenNextActivity() {
+        Game game = Game.getInstance();
+        // set the incorrect answer
+        game.setNextAnswer(-1);
+        Question question = game.getNextQuestion();
+        Intent intent;
+        if (question == null) {
+            // no more questions
+            intent = new Intent(this, GameFinishedActivity.class);
+        } else {
+            // next question
+            switch (question.type) {
+                case 0:
+                    intent = new Intent(this, QuestionSelectActivity.class);
+                    break;
+                case 1:
+                    intent = new Intent(this, QuestionInputActivity.class);
+                    break;
+                case 2:
+                    intent = new Intent(this, QuestionDropdownActivity.class);
+                    break;
+                default:
+                    return;
+            }
+        }
+        finish();
+        startActivity(intent);
     }
 }
