@@ -3,38 +3,58 @@
     xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
 
     <LinearLayout
+        android:id="@+id/loginLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:focusableInTouchMode="true"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        >
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/usernameTextInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android.support.design:counterMaxLength="3">
+            android:layout_height="match_parent"
+            android:textColorHint="@color/colorTextHint"
+            android:hint="@string/username"
+            android:backgroundTint="@color/white"
+            android:layout_margin="4dp"
+            >
             <EditText
                 android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/username" />
+                android:layout_height="match_parent"
+                android:textColor="@color/colorTextHint"
+                android:textSize="23sp"
+                android:backgroundTint="@color/white"
+                android:focusable="true"
+                android:layout_margin="4dp"
+                android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/password">
+            android:layout_height="match_parent"
+            android:textColorHint="@color/colorTextHint"
+            android:hint="@string/password"
+            android:backgroundTint="@color/white"
+            android:layout_margin="2dp"
+            >
             <EditText
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:layout_height="match_parent"
+                android:textColor="@color/colorTextHint"
+                android:textSize="23sp"
+                android:inputType="textPassword"
+                android:focusable="true"
+                android:backgroundTint="@color/white"
+                android:layout_margin="4dp"/>
         </android.support.design.widget.TextInputLayout>
 
         <Button
@@ -44,19 +64,20 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:background="#0f0"
             android:text="@string/login"
-            android:textColor="#FFF"
             android:textSize="20sp"
+            android:textColor="@color/buttonText"
             android:textStyle="bold"
-            android:onClick="Login"/>
+            android:onClick="Login"
+            android:background="@drawable/button_style"/>
 
         <TextView
+            android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:text="@string/dontHaveAnAcc"/>
+            android:text="@string/dontHaveAnAcc"
+            android:textColor="@color/plainText"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/registerButton"
@@ -65,12 +86,12 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:background="#0f0"
             android:text="@string/register"
-            android:textColor="#FFF"
+            android:textColor="@color/buttonText"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:onClick="OpenRegister"/>
+            android:onClick="OpenRegister"
+            android:background="@drawable/button_style"/>
 
     </LinearLayout>
 </ScrollView>

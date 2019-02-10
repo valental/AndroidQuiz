@@ -23,7 +23,9 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MyScoresActivity" />
         <activity android:name=".AllScoresActivity" />
-        <activity android:name=".CategoryActivity"></activity>
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".QuestionSelectActivity" />
+        <activity android:name=".QuestionInputActivity"></activity>
     </application>
 
 </manifest>

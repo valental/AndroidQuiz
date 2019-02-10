@@ -15,6 +15,7 @@
     <string name="allScores">Svi rezultati</string>
     <string name="film">Filmovi</string>
     <string name="historyAndArt">Povijest i umjetnost</string>
+    <string name="historyBreakAndArt">Povijest\ni umjetnost</string>
     <string name="sport">Sport</string>
     <string name="science">Znanost</string>
     <string name="geography">Geografija</string>
@@ -26,7 +27,10 @@
     <string name="already_taken">: već je zauzeto.</string>
     <string name="connection_not_established">Spajanje na server nije uspjelo.</string>
     <string name="email_not_confirmed">Email još nije potvrđen.</string>
-    <string name="password_incorrect">Lozinka je neispravna.</string>
+    <string name="password_incorrect">Lozinka ili korisničko ime neispravno.</string>
     <string name="login_not_available">Login trenutno nedostupan.</string>
-    <string name="registration_unavailable">Registration currently unavailable.</string>
+    <string name="registration_unavailable">Registracija trenutno nedostupna.</string>
+    <string name="home">Početna</string>
+    <string name="bestPlayers">Najbolji igrači</string>
+    <string name="scores_not_available">Rezultati trenutno nedostupni.</string>
 </resources>

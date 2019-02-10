@@ -2,47 +2,120 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="contentDescription"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/playButton"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#00a"
-        android:text="@string/play"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:onClick="PlayBtnClick"/>
 
-    <Button
-        android:id="@+id/myScoresButton"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="#0aa"
-        android:text="@string/myScores"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:onClick="MyScoresBtnClick"/>
+        android:layout_margin="5dp">
 
-    <Button
-        android:id="@+id/allScoresButton"
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@color/historyAndArtColor"
+            android:onClick="PlayBtnClick"
+            android:padding="10dp"
+            android:paddingLeft="20dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/play2"
+            android:paddingStart="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:clickable="true"
+            android:onClick="PlayBtnClick"
+            android:paddingRight="70dp"
+            android:text="@string/play"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="33sp"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:paddingEnd="70dp" />
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
         android:layout_weight="1"
-        android:background="#00a"
-        android:text="@string/allScores"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:onClick="AllScoresBtnClick"/>
+        android:layout_margin="5dp">
+
+        <ImageButton
+            android:id="@+id/myScoresButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@color/geographyColor"
+            android:onClick="MyScoresBtnClick"
+            android:padding="10dp"
+            android:paddingLeft="20dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/score2"
+            android:paddingStart="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:clickable="true"
+            android:onClick="MyScoresBtnClick"
+            android:paddingRight="20dp"
+            android:text="@string/myScores"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="33sp"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:paddingEnd="20dp" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="5dp">
+
+        <ImageButton
+            android:id="@+id/allScoresButtonScoresButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@color/scienceColor"
+            android:onClick="AllScoresBtnClick"
+            android:padding="10dp"
+            android:paddingLeft="20dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/stat2"
+            android:paddingStart="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:clickable="true"
+            android:onClick="AllScoresBtnClick"
+            android:paddingRight="20dp"
+            android:text="@string/allScores"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="33sp"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:paddingEnd="20dp" />
+    </FrameLayout>
+
 </LinearLayout>

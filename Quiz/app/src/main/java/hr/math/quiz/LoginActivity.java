@@ -1,6 +1,7 @@
 package hr.math.quiz;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import org.json.JSONObject;
@@ -29,8 +31,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void Login(View view) {
-        EditText usernameET = (EditText) findViewById(R.id.usernameEditText);
-        EditText passwordET = (EditText) findViewById(R.id.passwordEditText);
+        EditText usernameET = findViewById(R.id.usernameEditText);
+        EditText passwordET = findViewById(R.id.passwordEditText);
 
         String username = usernameET.getText().toString();
         String password = passwordET.getText().toString();

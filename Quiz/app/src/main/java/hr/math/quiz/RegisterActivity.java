@@ -1,6 +1,7 @@
 package hr.math.quiz;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import org.json.JSONObject;
@@ -40,10 +42,10 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void Register(View view) {
-        EditText usernameET = (EditText) findViewById(R.id.usernameEditText);
-        EditText emailET = (EditText) findViewById(R.id.emailEditText);
-        EditText passwordET = (EditText) findViewById(R.id.passwordEditText);
-        EditText confirmPassET = (EditText) findViewById(R.id.confirmPasswordEditText);
+        EditText usernameET = findViewById(R.id.usernameEditText);
+        EditText emailET = findViewById(R.id.emailEditText);
+        EditText passwordET = findViewById(R.id.passwordEditText);
+        EditText confirmPassET = findViewById(R.id.confirmPasswordEditText);
 
         String username = usernameET.getText().toString();
         String email = emailET.getText().toString();

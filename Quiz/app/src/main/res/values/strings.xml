@@ -12,8 +12,9 @@
     <string name="play">Play!</string>
     <string name="myScores">My Scores</string>
     <string name="allScores">All Scores</string>
-    <string name="film">Film</string>
+    <string name="film">Movies</string>
     <string name="historyAndArt">History And Art</string>
+    <string name="historyBreakAndArt">History\nAnd Art</string>
     <string name="sport">Sport</string>
     <string name="science">Science</string>
     <string name="geography">Geography</string>
@@ -25,7 +26,10 @@
     <string name="already_taken">: has already been taken.</string>
     <string name="connection_not_established">Connection to the server could not be established.</string>
     <string name="email_not_confirmed">Email has not been confirmed</string>
-    <string name="password_incorrect">Password is incorrect.</string>
+    <string name="password_incorrect">Password or username incorrect.</string>
     <string name="login_not_available">Login not available at the moment.</string>
     <string name="registration_unavailable">Registration currently unavailable.</string>
+    <string name="home">Home</string>
+    <string name="bestPlayers">Best Players</string>
+    <string name="scores_not_available">Scores are not available at the moment.</string>
 </resources>
