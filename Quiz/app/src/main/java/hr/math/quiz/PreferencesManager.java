@@ -3,6 +3,8 @@ package hr.math.quiz;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import hr.math.quiz.entities.Question;
+
 import static android.content.Context.MODE_PRIVATE;
 
 public class PreferencesManager {
@@ -42,4 +44,17 @@ public class PreferencesManager {
         editor.putString(key, value);
         editor.commit();
     }
+
+    public void saveLevel(Question.Category category, int value) {
+        SharedPreferences mySharedPreferences=context.getSharedPreferences(MYPREFS, mode);
+        SharedPreferences.Editor editor=mySharedPreferences.edit();
+        editor.putInt(category.name(), value);
+        editor.commit();
+    }
+
+    public int loadLevel(Question.Category category){
+        SharedPreferences mySharedPreferences=context.getSharedPreferences(MYPREFS,mode);
+        return mySharedPreferences.getInt(category.name(), 0);
+    }
+
 }

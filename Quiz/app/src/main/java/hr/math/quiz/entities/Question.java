@@ -91,7 +91,7 @@ public class Question {
 
         List<GameQuestion> rQuestions = new ArrayList<>();
 
-        boolean isHR = language.toLowerCase().startsWith("hr");
+        boolean isHR = language.toLowerCase().startsWith("hr") || language.toLowerCase().startsWith("cr");
 
         for(Question q : questions) {
             if(isHR) {

@@ -51,8 +51,7 @@ public class CategoryActivity extends AppCompatActivity {
         PreferencesManager preferencesManager = new PreferencesManager(getApplicationContext());
         String username = preferencesManager.LoadUsername();
 
-        // TODO query level from shared preferences
-        int level = 1;
+        int level = preferencesManager.loadLevel(category);
 
         List<GameQuestion> questions = Question.getQuestions(getApplication(), level, category);
 
@@ -66,10 +65,10 @@ public class CategoryActivity extends AppCompatActivity {
         } else {
             // next question
             switch (question.type) {
-                case 0:
+                case 1:
                     intent = new Intent(this, QuestionSelectActivity.class);
                     break;
-                case 1:
+                case 0:
                     intent = new Intent(this, QuestionInputActivity.class);
                     break;
                 case 2:

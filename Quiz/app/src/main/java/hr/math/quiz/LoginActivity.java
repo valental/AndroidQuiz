@@ -20,6 +20,7 @@ import org.json.JSONObject;
 import hr.math.quiz.api.ApiRequest;
 import hr.math.quiz.api.models.Session;
 import hr.math.quiz.api.models.User;
+import hr.math.quiz.entities.Question;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -86,8 +87,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private void finishLogin(Session session) {
         PreferencesManager preferencesManager = new PreferencesManager(this);
+
         preferencesManager.SaveUsername(session.getUsername());
         preferencesManager.SaveSessionToken(session.getToken());
+        preferencesManager.saveLevel(Question.Category.GEOGRAPHY, session.getLvlGeography());
+        preferencesManager.saveLevel(Question.Category.HISTORY_ART, session.getLvlHistoryAndArt());
+        preferencesManager.saveLevel(Question.Category.MOVIE, session.getLvlMovie());
+        preferencesManager.saveLevel(Question.Category.SCIENCE, session.getLvlScience());
+        preferencesManager.saveLevel(Question.Category.SPORT, session.getLvlSport());
+
         Intent intent = new Intent(this, MainActivity.class);
         finish();
         startActivity(intent);

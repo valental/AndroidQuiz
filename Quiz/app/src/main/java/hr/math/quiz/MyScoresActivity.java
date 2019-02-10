@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import hr.math.quiz.entities.Question;
+
 public class MyScoresActivity extends AppCompatActivity {
 
     @Override
@@ -26,12 +28,11 @@ public class MyScoresActivity extends AppCompatActivity {
         PreferencesManager preferencesManager = new PreferencesManager(getApplicationContext());
         String username = preferencesManager.LoadUsername();
 
-        // TODO query progress from shared preferences
-        int moviesLvl = 1;
-        int sportLvl = 2;
-        int scienceLvl = 1;
-        int geographyLvl = 2;
-        int historyAndArtLvl = 2;
+        int moviesLvl = preferencesManager.loadLevel(Question.Category.MOVIE) - 1;
+        int sportLvl = preferencesManager.loadLevel(Question.Category.SPORT) - 1;
+        int scienceLvl = preferencesManager.loadLevel(Question.Category.SCIENCE) - 1;
+        int geographyLvl = preferencesManager.loadLevel(Question.Category.GEOGRAPHY) - 1;
+        int historyAndArtLvl = preferencesManager.loadLevel(Question.Category.HISTORY_ART) - 1;
 
         ProgressBar moviesPB = findViewById(R.id.filmProgressBar);
         ProgressBar sportPB = findViewById(R.id.sportProgressBar);
