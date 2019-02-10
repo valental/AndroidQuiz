@@ -47,7 +47,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(2, "Opseg nogometne lopte je (u cm)?", "56-58", "60-62", "68-70", "74-76");
-        qen = new QuestionEN(2, "The size of the football ball is (in cm)?", "56-58", "60-62", "68-70", "74-76");
+        qen = new QuestionEN(2, "The perimiter of the football ball is (in cm)?", "56-58", "60-62", "68-70", "74-76");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -101,7 +101,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(8, "Koliko je bacačkih disciplina u atletskom desetoboju?", "2", "3", "4", "5");
-        qen = new QuestionEN(8, "How many pitching disciplines are in the athletic decal?", "2", "3", "4", "5");
+        qen = new QuestionEN(8, "How many throwing disciplines are there in the athletic decal?", "2", "3", "4", "5");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -110,7 +110,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(9, "Gdje je boksač Mate Parlov osvojio zlato na OI?", "Rim 1960.", "Tokio 1964.", "Mexico City 1968.", "München 1972.");
-        qen = new QuestionEN(9, "Where did the boxer Mate Parlov win gold at OG?", "Rome 1960.", "Tokyo 1964.", "Mexico City 1968.", "München 1972.");
+        qen = new QuestionEN(9, "Where did the boxer Mate Parlov win gold at the OG?", "Rome 1960.", "Tokyo 1964.", "Mexico City 1968.", "München 1972.");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -119,7 +119,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(10, "Hrvatska reprezentacija osvojila je srebro 2018. na SP u kojoj državi?", "Njemačka", "Francuska", "Rusija", "Poljska");
-        qen = new QuestionEN(10, "The Croatian national team won silver 2018. at the Worl Cup in which state?", "Germany", "France", "Russia", "Poland");
+        qen = new QuestionEN(10, "The Croatian national team won the silver medal at the 2018. World Cup in what country?", "Germany", "France", "Russia", "Poland");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -155,7 +155,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(14, "Hrvatska muška košarkaška reprezentacija osvojila je srebro na OI koje godine?", "1992.", "1996.", "2000.", "2004.");
-        qen = new QuestionEN(14, "In what year did the Croatian men's basketball team won silver at the OG?", "1992.", "1996.", "2000.", "2004.");
+        qen = new QuestionEN(14, "In what year did the Croatian men's basketball team win silver at the OG?", "1992.", "1996.", "2000.", "2004.");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -191,7 +191,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(18, "Najbolji golfer je?", "Kevin Durant", "Robert Fischer", "Mario Andretti", "Tiger Woods");
-        qen = new QuestionEN(18, "Best golfer is?", "Kevin Durant", "Robert Fischer", "Mario Andretti", "Tiger Woods");
+        qen = new QuestionEN(18, "The best golfer is?", "Kevin Durant", "Robert Fischer", "Mario Andretti", "Tiger Woods");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -218,7 +218,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(21, "Svjetski rekord u dizanju utega je?", "213 kg", "237 kg", "263 kg", "281 kg");
-        qen = new QuestionEN(21, "World record for weightlifting is?", "213 kg", "237 kg", "263 kg", "281 kg");
+        qen = new QuestionEN(21, "World record in weightlifting is?", "213 kg", "237 kg", "263 kg", "281 kg");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -227,7 +227,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(22, "Najviše osvojenih zlatnih medalja na EP u vaterpolu ima?", "Mađarska", "Jugoslavija", "Grčka", "Hrvatska");
-        qen = new QuestionEN(22, "Who won the most gold medals in Europe in waterpolo?", "Hungary", "Yugoslavia", "Greece", "Croatia");
+        qen = new QuestionEN(22, "Who won the most gold medals in Europe in water polo?", "Hungary", "Yugoslavia", "Greece", "Croatia");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -245,7 +245,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(24, "U kojoj je zemlji održano prvo SP u nogometu 1930.g?", "Brazil", "Paragvaj", "Engleska", "Urugvaj");
-        qen = new QuestionEN(24, "In what country was the first World Cup in football in 1930?", "Brazil", "Paraguay", "England", "Uruguay");
+        qen = new QuestionEN(24, "In what country was the first football World Cup in 1930 held?", "Brazil", "Paraguay", "England", "Uruguay");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -290,7 +290,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(29, "Cristiano Ronaldo trenutno igra u?", "Barcelona", "Real Madrid", "Juventus", "Bayern");
-        qen = new QuestionEN(29, "Cristiano Robaldo is currently playing for?", "Barcelona", "Real Madrid", "Juventus", "Bayern");
+        qen = new QuestionEN(29, "Cristiano Ronaldo is currently playing for?", "Barcelona", "Real Madrid", "Juventus", "Bayern");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -308,7 +308,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(31, "Koja je normalna ljudska temperatura (u C)?", "35", "36", "37", "38");
-        qen = new QuestionEN(31, "What is the normal human temperature (in C)?", "35", "36", "37", "38");
+        qen = new QuestionEN(31, "What is the normal temperature of the human body(in C)?", "35", "36", "37", "38");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -362,7 +362,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(37, "Koje boje je dragi kamen Smaragd?", "plava", "crvena", "žuta", "zelena");
-        qen = new QuestionEN(37, "What color is Smaragd?", "blue", "red", "yellow", "green");
+        qen = new QuestionEN(37, "What's the color of Emerald?", "blue", "red", "yellow", "green");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -398,7 +398,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(41, "Atmosfera Marsa je primarno sastavljena od?", "CO2", "H", "O", "N");
-        qen = new QuestionEN(41, "The atmosphere of Marsa is primarily composed of?", "CO2", "H", "O", "N");
+        qen = new QuestionEN(41, "The atmosphere of Mars is primarily composed of?", "CO2", "H", "O", "N");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -407,7 +407,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(42, "Python je stvoren?", "1970.", "1980.", "1990.", "2000.");
-        qen = new QuestionEN(42, "Python was created?", "1970.", "1980.", "1990.", "2000.");
+        qen = new QuestionEN(42, "Python was created in?", "1970.", "1980.", "1990.", "2000.");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -434,7 +434,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(45, "Što nije bolest oka?", "astigmatizam", "otitis", "glaukom", "katarakta");
-        qen = new QuestionEN(45, "What is not eye disease?", "astigmatism", "otitis", "glaucoma", "cataract");
+        qen = new QuestionEN(45, "What is not an eye disease?", "astigmatism", "otitis", "glaucoma", "cataract");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -443,7 +443,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(46, "Koliko posto mase čine svi mišići ljudskog tijela?", "0.2", "0.3", "0.4", "0.5");
-        qen = new QuestionEN(46, "In the human body, muscles make up?", "0.2", "0.3", "0.4", "0.5");
+        qen = new QuestionEN(46, "What percentage of the human body do the muscules muscles make up?", "0.2", "0.3", "0.4", "0.5");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -470,7 +470,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(49, "Izmjeničnu struju izmislio je?", "Watt", "Tesla", "Kelvin", "Born");
-        qen = new QuestionEN(49, "Alternate current is invented by?", "Watt", "Tesla", "Kelvin", "Born");
+        qen = new QuestionEN(49, "Alternate current was invented by?", "Watt", "Tesla", "Kelvin", "Born");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -488,7 +488,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(51, "Standard USB 2.0 omogućuje prijenos podataka brzinom od?", "240 Mbit/s", "480 Mbit/s", "960 Mbit/s", "1024 Mbit/s");
-        qen = new QuestionEN(51, "Standard USB 2.0 enables data transfer with speed?", "240 Mbit/s", "480 Mbit/s", "960 Mbit/s", "1024 Mbit/s");
+        qen = new QuestionEN(51, "Standard USB 2.0 enables data transfer with speed of?", "240 Mbit/s", "480 Mbit/s", "960 Mbit/s", "1024 Mbit/s");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -497,7 +497,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(52, "Triton i Nereid su dva velika satelita planeta?", "Neptun", "Saturn", "Jupiter", "Uran");
-        qen = new QuestionEN(52, "Triton and Nereid are two great satellite of planet?", "Neptune", "Saturn", "Jupiter", "Uranus");
+        qen = new QuestionEN(52, "Triton and Nereid are two great satellites of planet?", "Neptune", "Saturn", "Jupiter", "Uranus");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -524,7 +524,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(55, "U kojem je mjesecu Zemlja najbliža Suncu?", "ožujak", "lipanj", "rujan", "siječanj");
-        qen = new QuestionEN(55, "In what month is Earth closest to the Sun?", "march", "june", "september", "january");
+        qen = new QuestionEN(55, "In what month is the Earth closest to the Sun?", "march", "june", "september", "january");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -551,7 +551,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(58, "Koliko satelita ima Merkur?", "0", "1", "2", "4");
-        qen = new QuestionEN(58, "How many satellites have Mercury?", "0", "1", "2", "4");
+        qen = new QuestionEN(58, "Mercury has how many satellites?", "0", "1", "2", "4");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -578,7 +578,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(61, "Hadrijanov zid nalazio se u?", "Britaniji", "Dalmaciji", "Palestini", "Daciji");
-        qen = new QuestionEN(61, "Hadrian's wall was in?", "Britain", "Dalmatia", "Palestine", "Dation");
+        qen = new QuestionEN(61, "Hadrian's wall was built in?", "Britain", "Dalmatia", "Palestine", "Dation");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -596,7 +596,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(63, "Najveći rimski pisac komedija je?", "Ciceron", "Plaut", "Petronije", "Lukrecije");
-        qen = new QuestionEN(63, "The greatest roman comedian writer is?", "Cicero", "Plaute", "Petronius", "Lucrecius");
+        qen = new QuestionEN(63, "The greatest roman comedy writer is?", "Cicero", "Plaute", "Petronius", "Lucrecius");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -605,7 +605,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(64, "Zastava koje države ne sadrži crvenu boju?", "Španjolske", "Japana", "Njemačke", "Irske");
-        qen = new QuestionEN(64, "Which country flag does not contain red color?", "Spain", "Japan", "Germany", "Irland");
+        qen = new QuestionEN(64, "Which country flag does not contain the color red?", "Spain", "Japan", "Germany", "Irland");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -650,7 +650,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(69, "Hercule Poirot je lik romana koje spisateljice?", "Charlotte Bronte", "Jane Austen", "Agatha Christie", "Virginia Woolf");
-        qen = new QuestionEN(69, "Hercule Poirot is character from?", "Charlotte Bronte", "Jane Austen", "Agatha Christie", "Virginia Woolf");
+        qen = new QuestionEN(69, "Hercule Poirot is a character from?", "Charlotte Bronte", "Jane Austen", "Agatha Christie", "Virginia Woolf");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -659,7 +659,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(70, "U kojem gradu je donesen Ustav SAD-a?", "Bostonu", "Washingtonu", "Philadelphiji", "New Yorku");
-        qen = new QuestionEN(70, "In what city was the Constitution of the United States made?", "Boston", "Washington", "Philadelphia", "New York");
+        qen = new QuestionEN(70, "In what city was the Constitution of the United States written?", "Boston", "Washington", "Philadelphia", "New York");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -668,7 +668,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(71, "Koje godine su u Italiji fašisti uveli diktaturu?", "1918.", "1922.", "1926.", "1933.");
-        qen = new QuestionEN(71, "What year did fascists introduce dictatorships in Italy?", "1918.", "1922.", "1926.", "1933.");
+        qen = new QuestionEN(71, "What year did fascists introduce dictatorship in Italy?", "1918.", "1922.", "1926.", "1933.");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -686,7 +686,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(73, "\"Otac\" Sherlocka Holmesa je?", "A. Conan Doyle", "G. Eliot", "D. Defoe", "W. Blake");
-        qen = new QuestionEN(73, "Father of Sherlock Holmes is?", "A. Conan Doyle", "G. Eliot", "D. Defoe", "W. Blake");
+        qen = new QuestionEN(73, "The character of Sherlock Holmes was created by?", "A. Conan Doyle", "G. Eliot", "D. Defoe", "W. Blake");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -695,7 +695,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(74, "Gdje se nalazi Galerija Uffizi?", "Firenca", "Novara", "Torino", "Piancenza");
-        qen = new QuestionEN(74, "Where is Uffizi Galerie found?", "Firenze", "Novare", "Torino", "Piancenza");
+        qen = new QuestionEN(74, "Where is the Uffizi Galerie located?", "Firenze", "Novare", "Torino", "Piancenza");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -704,7 +704,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(75, "Tragediju Antigona napisao je?", "Homer", "Euripid", "Teokrit", "Sofoklo");
-        qen = new QuestionEN(75, "Who wrote tragedy Antigona?", "Homer", "Euripidus", "Teokritius", "Sophocles");
+        qen = new QuestionEN(75, "Who wrote the tragedy Antigona?", "Homer", "Euripidus", "Teokritius", "Sophocles");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -722,7 +722,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(77, "Kratku priču \"Crni mačak\" napisao je?", "Mark Twain", "Zane Grey", "Edgar Allan Poe", "Truman Capote");
-        qen = new QuestionEN(77, "Who wrote story \"Black cat\"?", "Mark Twain", "Zane Grey", "Edgar Allan Poe", "Truman Capote");
+        qen = new QuestionEN(77, "Who wrote the story \"Black cat\"?", "Mark Twain", "Zane Grey", "Edgar Allan Poe", "Truman Capote");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -767,7 +767,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(82, "Koji od navedenih nije dobio Nobelovu nagradu za književnost?", "Albert Camus", "Andre Gide", "Anatole France", "Marcel Proust");
-        qen = new QuestionEN(82, "Who didn't get Nobel price for literature?", "Albert Camus", "Andre Gide", "Anatole France", "Marcel Proust");
+        qen = new QuestionEN(82, "Who didn't get the Nobel price for literature?", "Albert Camus", "Andre Gide", "Anatole France", "Marcel Proust");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -776,7 +776,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(83, "Rusko-Japanski rat vodio se?", "1904-1905", "1875-1879", "1861-1863", "1855-1858");
-        qen = new QuestionEN(83, "When was Russian-Japanese war?", "1904-1905", "1875-1879", "1861-1863", "1855-1858");
+        qen = new QuestionEN(83, "When was the Russian-Japanese war?", "1904-1905", "1875-1879", "1861-1863", "1855-1858");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -821,7 +821,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(88, "Koliko krugova ima pakao u Danteovoj \"Božanstvenoj komediji\"?", "5", "7", "9", "11");
-        qen = new QuestionEN(88, "How many circles has hell in Dante's \"Divine Comedy\"?", "5", "7", "9", "11");
+        qen = new QuestionEN(88, "How many circles of hell are there in Dante's \"Divine Comedy\"?", "5", "7", "9", "11");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -829,7 +829,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
-        qhr = new QuestionHR(89, "Ustanak Mau Mau je pobuna koje naroda?", "Angola", "Sudan", "Senegal", "Kenija");
+        qhr = new QuestionHR(89, "Ustanak Mau Mau je pobuna naroda u?", "Angoli", "Sudanu", "Senegalu", "Keniji");
         qen = new QuestionEN(89, "The rise of Mau Mau is the rebellion of the people in?", "Angola", "Sudan", "Senegal", "Kenya");
 
         hrId = questionHRBox.put(qhr);
@@ -839,7 +839,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(90, "Trojanski rat započeo je zbog otmice kraljice?", "Penelopa", "Kasiopeja", "Helena", "Antiopa");
-        qen = new QuestionEN(90, "Troian war was begun becsause of the kidnaping of queen?", "Penelopa", "Kasiopeja", "Helena", "Antiopa");
+        qen = new QuestionEN(90, "Trojan war was begun because of the kidnaping of queen?", "Penelopa", "Kasiopeja", "Helena", "Antiopa");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -866,7 +866,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(93, "Kroz Sarajevo, glavni grad BIH, teče?", "Neretva", "Željeznica", "Miljacka", "Drina");
-        qen = new QuestionEN(93, "What river flows hrough Sarajevo, the capital city of BIH?", "Neretva", "Željeznica", "Miljacka", "Drina");
+        qen = new QuestionEN(93, "What river flows through Sarajevo, the capital city of Bosnia and Herzegovina?", "Neretva", "Željeznica", "Miljacka", "Drina");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -875,7 +875,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(94, "Kineski zid je dug?", "8851,8 km", "7256,3 km", "6514,2 km", "3568,9 km");
-        qen = new QuestionEN(94, "The Chinese Wall is long?", "8851,8 km", "7256,3 km", "6514,2 km", "3568,9 km");
+        qen = new QuestionEN(94, "How long is the Chinese Wall?", "8851,8 km", "7256,3 km", "6514,2 km", "3568,9 km");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -893,7 +893,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(96, "U kojoj se državi nalaze Apenini?", "Austrija", "Italija", "Slovenija", "Portugal");
-        qen = new QuestionEN(96, "Apennines are found in?", "Austria", "Italy", "Slovenia", "Portugal");
+        qen = new QuestionEN(96, "Apennines are located in?", "Austria", "Italy", "Slovenia", "Portugal");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -920,7 +920,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(99, "U kojoj državi se nalazi vrh Kilimandžaro?", "Kenija", "Uganda", "Tanzanija", "Ruanda");
-        qen = new QuestionEN(99, "Top of Kilimanjaro is in state?", "Kenya", "Uganda", "Tanzania", "Ruanda");
+        qen = new QuestionEN(99, "The top of Kilimanjaro is in?", "Kenya", "Uganda", "Tanzania", "Ruanda");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -929,7 +929,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(100, "Na kojem se hrvatskom otoku nalaze Košljun i Kolan?", "Hvar", "Brač", "Dugi otok", "Pag");
-        qen = new QuestionEN(100, "On which island are Košljun and Kolan?", "Hvar", "Brač", "Long Island", "Pag");
+        qen = new QuestionEN(100, "On which Croatian island are Košljun and Kolan?", "Hvar", "Brač", "Long Island", "Pag");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -947,7 +947,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(102, "Koja rijeka ne utječe u Crno more?", "Dunav", "Dnjepar", "Don", "Volta");
-        qen = new QuestionEN(102, "Which river does not enter the Black Sea?", "Dunav", "Dnjepar", "Don", "Volta");
+        qen = new QuestionEN(102, "Which river does not flow into the Black Sea?", "Dunav", "Dnjepar", "Don", "Volta");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -956,7 +956,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(103, "Koja država nema izlaz na more?", "Senegal", "Maroko", "Niger", "Nigerija");
-        qen = new QuestionEN(103, "Which state does not have a sea exit?", "Senegal", "Mrocco", "Niger", "Nigeria");
+        qen = new QuestionEN(103, "Which countries does not have a sea exit?", "Senegal", "Mrocco", "Niger", "Nigeria");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1001,7 +1001,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(108, "Površinski najmanja država SAD-a je?", "New Yersey", "Rhode Island", "Havaji", "Maryland");
-        qen = new QuestionEN(108, "The smallest state of the United States is?", "New Yersey", "Rhode Island", "Hawaii", "Maryland");
+        qen = new QuestionEN(108, "The smallest state in the United States is?", "New Yersey", "Rhode Island", "Hawaii", "Maryland");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1037,7 +1037,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(112, "Managua je glavni grad koje države?", "Mali", "Nikaragva", "Salvador", "Honduras");
-        qen = new QuestionEN(112, "Managua is the capital city of the state?", "Mali", "Nikaragua", "Salvador", "Honduras");
+        qen = new QuestionEN(112, "Managua is the capital of which country?", "Mali", "Nikaragua", "Salvador", "Honduras");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1046,7 +1046,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(113, "Uz urdski,koji je još službeni jezik u Pakistanu?", "engleski", "španjolski", "nizozemski", "francuski");
-        qen = new QuestionEN(113, "The official languages of Pakistan are urdu and?", "english", "spanish", "dutch", "french");
+        qen = new QuestionEN(113, "The official languages of Pakistan are Urdu and?", "English", "Spanish", "Dutch", "French");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1055,7 +1055,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(114, "Uz malgaški koji je službeni jezik na Madagaskaru?", "engleski", "portugalski", "francuski", "španjolski");
-        qen = new QuestionEN(114, "The official languages of Madagascar are malagasy and?", "english", "portuguese", "french", "spanish");
+        qen = new QuestionEN(114, "The official languages of Madagascar are Malagasy and?", "English", "Portuguese", "French", "Spanish");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1064,7 +1064,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(115, "Koji je službeni jezik u državi Sijera Leone?", "francuski", "engleski", "španjolski", "portugalski");
-        qen = new QuestionEN(115, "What is the official language of Sierra Leone?", "french", "english", "spanish", "portuguese");
+        qen = new QuestionEN(115, "What is the official language of Sierra Leone?", "French", "English", "Spanish", "Portuguese");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1091,7 +1091,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(118, "Koji je glavni grad Bocvane?", "Yangon", "Gaboron", "Port Louis", "Praia");
-        qen = new QuestionEN(118, "What is the capital city of Bocva?", "Yangon", "Gaboron", "Port Louis", "Praia");
+        qen = new QuestionEN(118, "What is the capital of Bocva?", "Yangon", "Gaboron", "Port Louis", "Praia");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1100,7 +1100,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(119, "Koji je glavni grad Vanuatua?", "Funafuti", "Port Vila", "Honiara", "Dushanbe");
-        qen = new QuestionEN(119, "What is the capital city of Vanuatu?", "Funafuti", "Port Vila", "Honiara", "Dushanbe");
+        qen = new QuestionEN(119, "What is the capital of Vanuatu?", "Funafuti", "Port Vila", "Honiara", "Dushanbe");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1154,7 +1154,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(125, "Redatelj filma \"Pasija\" je?", "John Ford", "Mel Gibson", "Oliver Stone", "Stanley Kubrick");
-        qen = new QuestionEN(125, "The director of the movie \"Pasia\" is?", "John Ford", "Mel Gibson", "Oliver Stone", "Stanley Kubrick");
+        qen = new QuestionEN(125, "The director of the movie \"The Passion of the Christ\" is?", "John Ford", "Mel Gibson", "Oliver Stone", "Stanley Kubrick");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1163,7 +1163,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(126, "Darth Vader je fiktivni lik kojeg serijala?", "Zvjezdane staze", "Ratovi zvijezda", "Indiana Jones", "Gospodar prstenova");
-        qen = new QuestionEN(126, "Darth Vader is a fictional character of a series?", "Star Trek", "Star Wars", "Indiana Jones", "Lord of the rings");
+        qen = new QuestionEN(126, "Darth Vader is a fictional character of the franchise?", "Star Trek", "Star Wars", "Indiana Jones", "Lord of the rings");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1172,7 +1172,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(127, "Glavnu ulogu nu filmu \"Doručak kod Tiffany\" tumači?", "Uma Thurman", "Sandra Bullock", "Julia Roberts", "Audrey Hepburn");
-        qen = new QuestionEN(127, "The main role in the film \"Breakfast at Tiffany\" plays?", "Uma Thurman", "Sandra Bullock", "Julia Roberts", "Audrey Hepburn");
+        qen = new QuestionEN(127, "WHo plays the main role in the film \"Breakfast at Tiffany\"?", "Uma Thurman", "Sandra Bullock", "Julia Roberts", "Audrey Hepburn");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1190,7 +1190,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(129, "Neo u filmu \"Matrix\" je?", "Tom Hanks", "Dustin Hoffman", "Keanu Reeves", "Tom Cruise");
-        qen = new QuestionEN(129, "Neo in the movie \"Matrix\" is?", "Tom Hanks", "Dustin Hoffman", "Keanu Reeves", "Tom Cruise");
+        qen = new QuestionEN(129, "Neo in the movie \"Matrix\" is played by?", "Tom Hanks", "Dustin Hoffman", "Keanu Reeves", "Tom Cruise");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1199,7 +1199,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(130, "Koga nije glumio Arnold Schwarzenegger?", "Conan Barbarin", "Rambo", "Kalidor", "Terminator");
-        qen = new QuestionEN(130, "Who did not play Arnold Schwarzenegger?", "Conan Barbarin", "Rambo", "Kalidor", "Terminator");
+        qen = new QuestionEN(130, "Which character Arnold Schwarzenegger did not play?", "Conan Barbarin", "Rambo", "Kalidor", "Terminator");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1235,7 +1235,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(134, "Koji film nije režirao Steven Spielberg?", "Povratak u budućnost", "Umjetna inteligencija", "Jurski park", "Braća Blues");
-        qen = new QuestionEN(134, "Which movie was not directed by Steven Spielberg?", "Back to the future", "Artificial Intelligence", "Jurassic park", "Blues Brothers");
+        qen = new QuestionEN(134, "Which movie was not directed by Steven Spielberg?", "Back to the Future", "Artificial Intelligence", "Jurassic Park", "Blues Brothers");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1244,7 +1244,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(135, "Glavnu žensku ulogu u filmu \"Titanik\" tumači?", "Uma Thurman", "Kate Winslet", "Milla Jovovich", "Jodie Foster");
-        qen = new QuestionEN(135, "The main female role in the movie \"Titanic\" plays?", "Uma Thurman", "Kate Winslet", "Milla Jovovich", "Jodie Foster");
+        qen = new QuestionEN(135, "Who plays the main female role in the movie \"Titanic\"?", "Uma Thurman", "Kate Winslet", "Milla Jovovich", "Jodie Foster");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1271,7 +1271,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(138, "Tko je odigrao glavnu ulogu u filmu \"Hrabro srce\"?", "Liam Neeson", "Clint Eastwood", "Mel Gibson", "Harrison Ford");
-        qen = new QuestionEN(138, "Who played the lead role in the movie \"Brave heart\"?", "Liam Neeson", "Clint Eastwood", "Mel Gibson", "Harrison Ford");
+        qen = new QuestionEN(138, "Who played the lead role in the movie \"Braveheart\"?", "Liam Neeson", "Clint Eastwood", "Mel Gibson", "Harrison Ford");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1280,7 +1280,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(139, "Glavni lik crtića \"Oblačno s čuftama\" zove se?", "Mate Sardela", "Šljapko", "Ivo Lubin", "Marin Prskalo");
-        qen = new QuestionEN(139, "The main character of the cartoon \"Cloudy with chance of meatballs\" is called?", "Manny", "Shelbourne", "Sam Sparks", "Flint Lockwood");
+        qen = new QuestionEN(139, "The main character of the cartoon \"Cloudy with Chance of Meatballs\" is called?", "Manny", "Shelbourne", "Sam Sparks", "Flint Lockwood");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1307,7 +1307,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(142, "Koje je godine prvi put održan Filmski festival u Cannesu?", "1968.", "1957.", "1946.", "1938.");
-        qen = new QuestionEN(142, "Which year was the first Cannes Film Festival held?", "1968.", "1957.", "1946.", "1938.");
+        qen = new QuestionEN(142, "What year was the first Cannes Film Festival held?", "1968.", "1957.", "1946.", "1938.");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1316,7 +1316,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(143, "Halle Berry osvojila je Oskara za ulogu u filmu?", "X-Men", "Konačna odluka", "Monster's Ball", "Žena mačka");
-        qen = new QuestionEN(143, "Halle Berry has won Oscar for the role in the movie?", "X-Men", "", "Monster's Ball", "Catwoman");
+        qen = new QuestionEN(143, "Halle Berry has won the Oscar for the role in the movie?", "X-Men", "", "Monster's Ball", "Catwoman");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1325,7 +1325,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(144, "Glumica Charlize Theron rođena je u?", "Liberiji", "Keniji", "Senegalu", "Južnoafričkoj Republici");
-        qen = new QuestionEN(144, "Actress Charlize Theron was born in?", "Liberia", "Kenya", "Senegal", "Republic of South Africa");
+        qen = new QuestionEN(144, "The actress Charlize Theron was born in?", "Liberia", "Kenya", "Senegal", "Republic of South Africa");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1334,7 +1334,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(145, "Film \"Vlak u snijegu\" nastao je po romanu kojeg pisca?", "Mato Lovrak", "Zvonimir Balog", "Hrvoje Hitrec", "Ivan Kušan");
-        qen = new QuestionEN(145, "The movie \"Snowmobile Train\" was created from the novel by writer?", "Mato Lovrak", "Zvonimir Balog", "Hrvoje Hitrec", "Ivan Kušan");
+        qen = new QuestionEN(145, "The movie \"Train in the Snow\" was created from the novel by writer?", "Mato Lovrak", "Zvonimir Balog", "Hrvoje Hitrec", "Ivan Kušan");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1343,7 +1343,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(146, "Glazbu za film \"Dobar, loš, zao\" napisao je?", "Stevie Wonder", "Ennio Morricone", "Henry Mancini", "Jerry Goldsmith");
-        qen = new QuestionEN(146, "Music for the movie \"The good, the bad, the ugly\" wrote?", "Stevie Wonder", "Ennio Morricone", "Henry Mancini", "Jerry Goldsmith");
+        qen = new QuestionEN(146, "Music for the movie \"The good, the Bad and the Ugly\" wrote?", "Stevie Wonder", "Ennio Morricone", "Henry Mancini", "Jerry Goldsmith");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
@@ -1379,7 +1379,7 @@ public class App extends Application {
         questionBox.put(question);
 
         qhr = new QuestionHR(150, "Glavnu ulogu u filmu \"Spartak\" odigrao je?", "Harrison Ford", "Anthony Perkins", "Kirk Douglas", "Jack Nicholson");
-        qen = new QuestionEN(150, "Who played the main role in movie \"Spartak\"?", "Harrison Ford", "Anthony Perkins", "Kirk Douglas", "Jack Nicholson");
+        qen = new QuestionEN(150, "Who played the main role in movie \"Spartacus\"?", "Harrison Ford", "Anthony Perkins", "Kirk Douglas", "Jack Nicholson");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
