@@ -9,6 +9,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import hr.math.quiz.entities.Progress;
+import hr.math.quiz.entities.Question;
+import io.objectbox.Box;
+
 public class CategoryActivity extends AppCompatActivity {
 
     @Override
@@ -18,20 +25,58 @@ public class CategoryActivity extends AppCompatActivity {
     }
 
     public void FilmBtnClick(View view) {
+        StartGame(Question.Category.MOVIE);
     }
 
     public void GeographyBtnClick(View view) {
+        StartGame(Question.Category.GEOGRAPHY);
     }
 
     public void HistoryAndArtBtnClick(View view) {
+        StartGame(Question.Category.HISTORY_ART);
     }
 
     public void SportBtnClick(View view) {
-        Intent in=new Intent(this, QuestionSelectActivity.class);
-        startActivity(in);
+        StartGame(Question.Category.SPORT);
     }
 
     public void ScienceBtnClick(View view) {
+        StartGame(Question.Category.SCIENCE);
+    }
+
+    private void StartGame(Question.Category category) {
+        Game game = Game.getInstance();
+        PreferencesManager preferencesManager = new PreferencesManager(getApplicationContext());
+        String username = preferencesManager.LoadUsername();
+
+        Box<Progress> progressBox = ((App)getApplication()).getBoxStore().boxFor(Progress.class);
+        //progressBox.
+
+        // TODO set correct questions
+        game.setQuestions(new ArrayList<Question>());
+
+        Question question = game.getNextQuestion();
+        Intent intent;
+        if (question == null) {
+            // no more questions
+            intent = new Intent(this, GameFinishedActivity.class);
+        } else {
+            // next question
+            switch (question.type) {
+                case 0:
+                    intent = new Intent(this, QuestionSelectActivity.class);
+                    break;
+                case 1:
+                    intent = new Intent(this, QuestionInputActivity.class);
+                    break;
+                case 2:
+                    intent = new Intent(this, QuestionDropdownActivity.class);
+                    break;
+                default:
+                    return;
+            }
+        }
+        startActivity(intent);
     }
 
     @Override

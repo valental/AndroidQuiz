@@ -8,7 +8,7 @@ import io.objectbox.annotation.Id;
 public class Progress {
     @Id public long id;
 
-    public long userId;
+    public String username;
 
     @Convert(converter = Question.CategoryConverter.class, dbType = Integer.class)
     public Question.Category category;
@@ -20,7 +20,7 @@ public class Progress {
 
     public Progress(long id, long userId, Question.Category category, int currentLevel) {
         this.id = id;
-        this.userId = userId;
+        this.username = username;
         this.category = category;
         this.currentLevel = currentLevel;
     }

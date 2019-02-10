@@ -25,7 +25,9 @@
         <activity android:name=".AllScoresActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".QuestionSelectActivity" />
-        <activity android:name=".QuestionInputActivity"></activity>
+        <activity android:name=".QuestionInputActivity" />
+        <activity android:name=".GameFinishedActivity" />
+        <activity android:name=".QuestionDropdownActivity"></activity>
     </application>
 
 </manifest>
