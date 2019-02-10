@@ -12,8 +12,10 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import hr.math.quiz.entities.GameQuestion;
 import hr.math.quiz.entities.Progress;
 import hr.math.quiz.entities.Question;
+import hr.math.quiz.entities.Question_;
 import io.objectbox.Box;
 
 public class CategoryActivity extends AppCompatActivity {
@@ -49,13 +51,14 @@ public class CategoryActivity extends AppCompatActivity {
         PreferencesManager preferencesManager = new PreferencesManager(getApplicationContext());
         String username = preferencesManager.LoadUsername();
 
-        Box<Progress> progressBox = ((App)getApplication()).getBoxStore().boxFor(Progress.class);
-        //progressBox.
+        // TODO query level from shared preferences
+        int level = 1;
 
-        // TODO set correct questions
-        game.setQuestions(new ArrayList<Question>());
+        List<GameQuestion> questions = Question.getQuestions(getApplication(), level, category);
 
-        Question question = game.getNextQuestion();
+        game.setQuestions(questions);
+
+        GameQuestion question = game.getNextQuestion();
         Intent intent;
         if (question == null) {
             // no more questions

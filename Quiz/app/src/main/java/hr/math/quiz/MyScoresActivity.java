@@ -26,7 +26,7 @@ public class MyScoresActivity extends AppCompatActivity {
         PreferencesManager preferencesManager = new PreferencesManager(getApplicationContext());
         String username = preferencesManager.LoadUsername();
 
-        // TODO query progress from the db
+        // TODO query progress from shared preferences
         int moviesLvl = 1;
         int sportLvl = 2;
         int scienceLvl = 1;

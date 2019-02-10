@@ -56,7 +56,6 @@ public class AllScoresActivity extends AppCompatActivity {
     }
 
     private void LoadScores(LeaderBoard leaderBoard) {
-        // TODO get the best player in each category
         String[] userMovies = {leaderBoard.getMovie1(), leaderBoard.getMovie2(), leaderBoard.getMovie3()};
         String[] userSport = {leaderBoard.getSport1(), leaderBoard.getSport2(), leaderBoard.getSport3()};
         String[] userScience = {leaderBoard.getScience1(), leaderBoard.getScience2(), leaderBoard.getScience3()};

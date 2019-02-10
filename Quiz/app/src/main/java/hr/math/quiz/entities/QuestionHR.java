@@ -5,7 +5,7 @@ import io.objectbox.annotation.Id;
 import io.objectbox.relation.ToOne;
 
 @Entity
-public class QuestionHR {
+public class QuestionHR implements IQuestion {
     @Id(assignable = true) long id;
 
     public String text;
@@ -26,5 +26,30 @@ public class QuestionHR {
     }
 
     public QuestionHR(){
+    }
+
+    @Override
+    public String getText() {
+        return text;
+    }
+
+    @Override
+    public String getAnswer1() {
+        return answer1;
+    }
+
+    @Override
+    public String getAnswer2() {
+        return answer2;
+    }
+
+    @Override
+    public String getAnswer3() {
+        return answer3;
+    }
+
+    @Override
+    public String getAnswer4() {
+        return answer4;
     }
 }

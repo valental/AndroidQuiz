@@ -8,11 +8,12 @@ import android.view.Gravity;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import hr.math.quiz.entities.GameQuestion;
 import hr.math.quiz.entities.Question;
 
 public class QuestionSelectActivity extends AppCompatActivity {
 
-    Question myQuestion;
+    GameQuestion myQuestion;
     ProgressBar progressBar;
     Handler handler = new Handler();
     long start = System.currentTimeMillis();
@@ -72,7 +73,7 @@ public class QuestionSelectActivity extends AppCompatActivity {
         Game game = Game.getInstance();
         // set the incorrect answer
         game.setNextAnswer(-1);
-        Question question = game.getNextQuestion();
+        GameQuestion question = game.getNextQuestion();
         Intent intent;
         if (question == null) {
             // no more questions

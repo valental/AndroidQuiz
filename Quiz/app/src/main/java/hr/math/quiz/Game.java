@@ -3,12 +3,13 @@ package hr.math.quiz;
 import java.util.ArrayList;
 import java.util.List;
 
+import hr.math.quiz.entities.GameQuestion;
 import hr.math.quiz.entities.Question;
 
 public class Game {
     private static Game INSTANCE;
     private int currentQuestion;
-    private List<Question> questions;
+    private List<GameQuestion> questions;
     private List<Integer> answersInt;
     private List<String> answersString;
 
@@ -22,7 +23,7 @@ public class Game {
         return INSTANCE;
     }
 
-    public void setQuestions(List<Question> questions) {
+    public void setQuestions(List<GameQuestion> questions) {
         this.questions = questions;
         answersInt = new ArrayList<Integer>();
         answersString = new ArrayList<String>();
@@ -39,12 +40,12 @@ public class Game {
         answersString.add(answer);
     }
 
-    public Question getNextQuestion() {
+    public GameQuestion getNextQuestion() {
         currentQuestion++;
         return currentQuestion < questions.size() ? questions.get(currentQuestion) : null;
     }
 
-    public Question getCurrentQuestion() {
+    public GameQuestion getCurrentQuestion() {
         return (0 <= currentQuestion && currentQuestion < questions.size()) ? questions.get(currentQuestion) : null;
     }
 }

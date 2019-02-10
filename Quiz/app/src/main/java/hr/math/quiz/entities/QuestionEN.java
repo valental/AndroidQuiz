@@ -4,7 +4,7 @@ import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 
 @Entity
-public class QuestionEN {
+public class QuestionEN implements IQuestion {
     @Id(assignable = true) long id;
 
     public String text;
@@ -25,5 +25,30 @@ public class QuestionEN {
     }
 
     public QuestionEN(){
+    }
+
+    @Override
+    public String getText() {
+        return text;
+    }
+
+    @Override
+    public String getAnswer1() {
+        return answer1;
+    }
+
+    @Override
+    public String getAnswer2() {
+        return answer2;
+    }
+
+    @Override
+    public String getAnswer3() {
+        return answer3;
+    }
+
+    @Override
+    public String getAnswer4() {
+        return answer4;
     }
 }
