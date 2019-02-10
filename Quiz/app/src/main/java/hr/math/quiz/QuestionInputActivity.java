@@ -1,14 +1,28 @@
 package hr.math.quiz;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
+
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import hr.math.quiz.entities.GameQuestion;
 
 public class QuestionInputActivity extends AppCompatActivity {
+
+    GameQuestion myQuestion;
+    ProgressBar progressBar;
+    Handler handler = new Handler();
+    long start = System.currentTimeMillis();
+    Game game;
+    // Thread safe boolean
+    AtomicBoolean done = new AtomicBoolean(false);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +43,20 @@ public class QuestionInputActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.logout:
-                PreferencesManager preferencesManager = new PreferencesManager(this);
-                preferencesManager.ClearPreferences();
-                Intent intentLogin = new Intent(this, LoginActivity.class);
-                finish();
-                startActivity(intentLogin);
-                return true;
-            case R.id.home:
-                Intent intentHome = new Intent(this, MainActivity.class);
-                startActivity(intentHome);
-                return true;
+        if (done.compareAndSet(false, true)) {
+            switch (item.getItemId()) {
+                case R.id.logout:
+                    PreferencesManager preferencesManager = new PreferencesManager(this);
+                    preferencesManager.ClearPreferences();
+                    Intent intentLogin = new Intent(this, LoginActivity.class);
+                    finish();
+                    startActivity(intentLogin);
+                    return true;
+                case R.id.home:
+                    Intent intentHome = new Intent(this, MainActivity.class);
+                    startActivity(intentHome);
+                    return true;
+            }
         }
         return false;
     }

@@ -144,7 +144,7 @@ public class QuestionSelectActivity extends AppCompatActivity {
                 default:
                     throw new RuntimeException("Unknow button ID");
             }
-            game.addTime((int)(System.currentTimeMillis() - start));
+            game.addTime((int) (System.currentTimeMillis() - start));
             OpenNextActivity();
         }
     }
@@ -162,19 +162,22 @@ public class QuestionSelectActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.logout:
-                PreferencesManager preferencesManager = new PreferencesManager(this);
-                preferencesManager.ClearPreferences();
-                Intent intentLogin = new Intent(this, LoginActivity.class);
-                finish();
-                startActivity(intentLogin);
-                return true;
-            case R.id.home:
-                Intent intentHome = new Intent(this, MainActivity.class);
-                startActivity(intentHome);
-                return true;
+        if (done.compareAndSet(false, true)) {
+            switch (item.getItemId()) {
+                case R.id.logout:
+                    PreferencesManager preferencesManager = new PreferencesManager(this);
+                    preferencesManager.ClearPreferences();
+                    Intent intentLogin = new Intent(this, LoginActivity.class);
+                    finish();
+                    startActivity(intentLogin);
+                    return true;
+                case R.id.home:
+                    Intent intentHome = new Intent(this, MainActivity.class);
+                    startActivity(intentHome);
+                    return true;
+            }
         }
         return false;
+
     }
 }
