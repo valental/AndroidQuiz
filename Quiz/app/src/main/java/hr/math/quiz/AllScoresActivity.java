@@ -6,14 +6,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import hr.math.quiz.api.ApiRequest;
+import hr.math.quiz.api.models.LeaderBoard;
+import hr.math.quiz.api.models.Session;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AllScoresActivity extends AppCompatActivity {
 
@@ -22,16 +31,37 @@ public class AllScoresActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_scores);
 
-        LoadScores();
+        getScoresCall();
     }
 
-    private void LoadScores() {
+    private void getScoresCall() {
+        Call<LeaderBoard> scoresCall = ApiRequest.getScores();
+
+        scoresCall.enqueue(new Callback<LeaderBoard>() {
+            @Override
+            public void onResponse(Call<LeaderBoard> call, Response<LeaderBoard> response) {
+                if(response.code() == 200) {
+                    LeaderBoard leaderBoard = response.body();
+                    LoadScores(leaderBoard);
+                } else {
+                    MakeToastLong(getString(R.string.scores_not_available));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LeaderBoard> call, Throwable t) {
+                MakeToastLong(getString(R.string.connection_not_established));
+            }
+        });
+    }
+
+    private void LoadScores(LeaderBoard leaderBoard) {
         // TODO get the best player in each category
-        String[] userMovies = {"Igrač1", "Igrač2", "Igrač3"};
-        String[] userSport = {"Igrač4", "Igrač5", "Igrač6"};
-        String[] userScience = {"Igrač7", "Igrač8", "Igrač9"};
-        String[] userGeography = {"Igrač1", "Igrač2", "Igrač3"};
-        String[] userHistoryAndArt = {"Igrač1", "Igrač2", "Igrač3"};
+        String[] userMovies = {leaderBoard.getMovie1(), leaderBoard.getMovie2(), leaderBoard.getMovie3()};
+        String[] userSport = {leaderBoard.getSport1(), leaderBoard.getSport2(), leaderBoard.getSport3()};
+        String[] userScience = {leaderBoard.getScience1(), leaderBoard.getScience2(), leaderBoard.getScience3()};
+        String[] userGeography = {leaderBoard.getGeography1(), leaderBoard.getGeography2(), leaderBoard.getGeography3()};
+        String[] userHistoryAndArt = {leaderBoard.getHistoryAndArt1(), leaderBoard.getHistoryAndArt2(), leaderBoard.getHistoryAndArt3()};
 
         AddScoreBoard(R.id.moviesPlayersLL, userMovies);
         AddScoreBoard(R.id.sportPlayersLL, userSport);
@@ -90,5 +120,11 @@ public class AllScoresActivity extends AppCompatActivity {
                 return true;
         }
         return false;
+    }
+
+    private void MakeToastLong(String message) {
+        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 }

@@ -1,8 +1,9 @@
 package hr.math.quiz.api;
 
+import hr.math.quiz.api.models.LeaderBoard;
 import hr.math.quiz.api.models.Session;
 import hr.math.quiz.api.models.User;
-import okhttp3.ResponseBody;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -14,4 +15,7 @@ public interface ApiService {
 
     @POST("api/session")
     Call<Session> create(@Body Session session);
+
+    @GET("api/scores")
+    Call<LeaderBoard> getScores();
 }

@@ -1,6 +1,7 @@
 package hr.math.quiz.api;
 
 
+import hr.math.quiz.api.models.LeaderBoard;
 import hr.math.quiz.api.models.Session;
 import hr.math.quiz.api.models.User;
 import retrofit2.Call;
@@ -27,5 +28,11 @@ public class ApiRequest {
         Call<Session> sessionCall = service.create(session);
 
         return sessionCall;
+    }
+
+    public static Call<LeaderBoard> getScores() {
+        Call<LeaderBoard> leaderBoardCall = service.getScores();
+
+        return leaderBoardCall;
     }
 }
