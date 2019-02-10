@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_25_232403) do
+ActiveRecord::Schema.define(version: 2019_02_10_111639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,26 @@ ActiveRecord::Schema.define(version: 2019_01_25_232403) do
     t.boolean "has_registered", default: false
     t.string "username", null: false
     t.integer "score", default: 0, null: false
+    t.integer "geography", default: 1, null: false
+    t.integer "sport", default: 1, null: false
+    t.integer "movie", default: 1, null: false
+    t.integer "history_art", default: 1, null: false
+    t.integer "science", default: 1, null: false
+    t.decimal "sport_1"
+    t.decimal "sport_2"
+    t.decimal "sport_3"
+    t.decimal "history_art_1"
+    t.decimal "history_art_2"
+    t.decimal "history_art_3"
+    t.decimal "geography_1"
+    t.decimal "geography_2"
+    t.decimal "geography_3"
+    t.decimal "movie_1"
+    t.decimal "movie_2"
+    t.decimal "movie_3"
+    t.decimal "science_1"
+    t.decimal "science_2"
+    t.decimal "science_3"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["token"], name: "index_users_on_token", unique: true
   end
