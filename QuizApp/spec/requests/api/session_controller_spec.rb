@@ -1,7 +1,7 @@
 RSpec.describe 'Session API', type: :request do
   include TestHelpers::JsonResponse
 
-  let(:credentials) { { email: 'user@email.com', password: 'pass', has_registered: true } }
+  let(:credentials) { { username: 'username', password: 'pass', has_registered: true } }
   let(:user) { FactoryBot.create(:user, credentials) }
 
   before { user }
@@ -9,23 +9,23 @@ RSpec.describe 'Session API', type: :request do
   describe 'POST /api/session' do
     context 'with valid credentials' do
       it 'returns status code 201 CREATED' do
-        post '/api/session', params: { session: credentials }
+        post '/api/session', params: credentials
 
         expect(response).to have_http_status(:created)
       end
 
-      it 'response contains token and user' do
-        post '/api/session', params: { session: credentials }
+      it 'response contains token and username' do
+        post '/api/session', params: credentials
 
-        expect(json_body[:session]).to include(:token, :user)
+        expect(json_body).to include(:id, :username, :token)
       end
 
       it 'response token value matches database value' do
-        post '/api/session', params: { session: credentials }
+        post '/api/session', params: credentials
 
-        user = User.find(json_body[:session][:user][:id])
+        user = User.find(json_body[:id])
 
-        expect(user.token).to eq(json_body[:session][:token])
+        expect(user.token).to eq(json_body[:token])
       end
     end
 
@@ -33,13 +33,13 @@ RSpec.describe 'Session API', type: :request do
       let(:invalid_credentials) { { email: 'user@email.com', password: '' } }
 
       it 'fails with status code 400 BAD_REQUEST' do
-        post '/api/session', params: { session: invalid_credentials }
+        post '/api/session', params: invalid_credentials
 
         expect(response).to have_http_status(:bad_request)
       end
 
       it 'returns errors' do
-        post '/api/session', params: { session: invalid_credentials }
+        post '/api/session', params: invalid_credentials
 
         expect(json_body).to include(:errors)
       end

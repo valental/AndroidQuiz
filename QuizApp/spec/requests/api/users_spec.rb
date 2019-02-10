@@ -121,30 +121,23 @@ RSpec.describe 'Users API', type: :request do
     context 'when params are valid' do
       it 'returns status code 201 CREATED' do
         post '/api/users',
-             params: { user: user_params }
+             params: user_params
 
         expect(response).to have_http_status :created
-      end
-
-      it 'creates a user' do
-        post '/api/users',
-             params: { user: user_params }
-
-        expect(json_body).to include(:user)
       end
 
       it 'increases number of users by one' do
         expect do
           post '/api/users',
-               params: { user: user_params }
+               params: user_params
         end.to change(User, :count).by(1)
       end
 
       it 'user can authenticate' do
         post '/api/users',
-             params: { user: user_params.merge(password: 'password') }
+             params: user_params.merge(password: 'password')
 
-        user = User.find(json_body[:user][:id])
+        user = User.find(json_body[:id])
 
         expect(user.authenticate('password')).not_to be_falsey
       end
@@ -213,7 +206,7 @@ RSpec.describe 'Users API', type: :request do
 
       it 'updates user' do
         put "/api/users/#{user.id}",
-            params: { user: { email: 'new.mail@example.com' } },
+            params: { email: 'new.mail@example.com' },
             headers: { 'Authorization' => user.token }
 
         expect(json_body[:user]).to include(email: 'new.mail@example.com')
@@ -233,7 +226,7 @@ RSpec.describe 'Users API', type: :request do
     context 'when params are invalid' do
       it 'returns 400 BAD REQUEST' do
         put "/api/users/#{user.id}",
-            params: { user: { email: '' } },
+            params: { email: '' },
             headers: { 'Authorization' => user.token }
 
         expect(response).to have_http_status(:bad_request)
@@ -241,7 +234,7 @@ RSpec.describe 'Users API', type: :request do
 
       it 'returns errors' do
         put "/api/users/#{user.id}",
-            params: { user: { email: '' } },
+            params: { email: '' },
             headers: { 'Authorization' => user.token }
 
         expect(json_body).to include(:errors)
@@ -249,7 +242,7 @@ RSpec.describe 'Users API', type: :request do
 
       it 'cannot set password to nil' do
         put "/api/users/#{user.id}",
-            params: { user: { password: nil } },
+            params: { password: nil },
             headers: { 'Authorization' => user.token }
 
         expect(response).to have_http_status(:bad_request)
