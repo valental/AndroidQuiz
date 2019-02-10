@@ -28,6 +28,10 @@ public class PreferencesManager {
         return LoadPreference("username");
     }
 
+    public String loadSessionToken() {
+        return LoadPreference("token");
+    }
+
     public void ClearPreferences()
     {
         SaveUsername("");

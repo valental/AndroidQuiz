@@ -13,6 +13,8 @@ public class Game {
     private List<Integer> answersInt;
     private List<String> answersString;
     private int time;
+    private int level;
+    private Question.Category category;
 
     private Game() {
     }
@@ -30,6 +32,14 @@ public class Game {
         answersString = new ArrayList<String>();
         currentQuestion = -1;
         time = 0;
+    }
+
+    public void setCategory(Question.Category category) {
+        this.category = category;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public void setNextAnswer(int answer) {
@@ -51,11 +61,35 @@ public class Game {
         return (0 <= currentQuestion && currentQuestion < questions.size()) ? questions.get(currentQuestion) : null;
     }
 
+    public int numberOfCorrectAnswers() {
+        int correct = 0;
+
+        for(int i = 0; i < questions.size(); i++) {
+            if(questions.get(i).correct == answersInt.get(i)) {
+                correct++;
+            }
+        }
+
+        return correct;
+    }
+
+    public boolean allCorrect() {
+        return numberOfCorrectAnswers() == questions.size();
+    }
+
     public int getTime() {
         return time;
     }
 
     public void addTime(int time) {
         this.time += time;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public Question.Category getCategory() {
+        return category;
     }
 }
