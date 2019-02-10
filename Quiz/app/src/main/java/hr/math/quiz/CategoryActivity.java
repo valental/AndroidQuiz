@@ -52,7 +52,7 @@ public class CategoryActivity extends AppCompatActivity {
         String username = preferencesManager.LoadUsername();
 
         int level = preferencesManager.loadLevel(category);
-
+        // TODO CHANGE THE LEVEL BACK TO level
         List<GameQuestion> questions = Question.getQuestions(getApplication(), 1, category);
 
         game.setQuestions(questions);

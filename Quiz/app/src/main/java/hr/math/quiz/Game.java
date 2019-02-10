@@ -12,6 +12,7 @@ public class Game {
     private List<GameQuestion> questions;
     private List<Integer> answersInt;
     private List<String> answersString;
+    private int time;
 
     private Game() {
     }
@@ -28,6 +29,7 @@ public class Game {
         answersInt = new ArrayList<Integer>();
         answersString = new ArrayList<String>();
         currentQuestion = -1;
+        time = 0;
     }
 
     public void setNextAnswer(int answer) {
@@ -47,5 +49,13 @@ public class Game {
 
     public GameQuestion getCurrentQuestion() {
         return (0 <= currentQuestion && currentQuestion < questions.size()) ? questions.get(currentQuestion) : null;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void addTime(int time) {
+        this.time += time;
     }
 }

@@ -76,6 +76,7 @@ public class QuestionSelectActivity extends AppCompatActivity {
                         if (done.compareAndSet(false, true)) {
                             // set the incorrect answer
                             game.setNextAnswer(-1);
+                            game.addTime(10000);
                             OpenNextActivity();
                         }
                     }
@@ -139,6 +140,7 @@ public class QuestionSelectActivity extends AppCompatActivity {
                 default:
                     throw new RuntimeException("Unknow button ID");
             }
+            game.addTime((int)(System.currentTimeMillis() - start));
             OpenNextActivity();
         }
     }
