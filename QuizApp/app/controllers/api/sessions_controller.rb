@@ -4,18 +4,20 @@ module Api
 
     # POST /api/session
     def create
-      user = User.find_by(email: session_params[:email])
+      user = User.find_by(username: session_params[:username])
 
       if user&.authenticate(session_params[:password])
         if(!user.has_registered)
-          render json: { errors: { registration: ['has not been confirmed'] } },
-                 status: :bad_request
+          render json: { errors: { email: ['has not been confirmed'] } },
+                 status: :unprocessable_entity
         else
-          render json: Session.new(token: user.token, user: user),
+          render json: { id: user.id, username: user.username, token: user.token,
+                         sport: user.sport, geography: user.geography, science: user.science,
+                         history_art: user.history_art, movie: user.movie },
                  status: :created
         end
       else
-        render json: { errors: { credentials: ['are invalid'] } },
+        render json: { errors: { password: ['is incorrect'] } },
                status: :bad_request
       end
     end
@@ -30,7 +32,7 @@ module Api
     private
 
     def session_params
-      params.require(:session).permit(:email, :password)
+      params.permit(:username, :password)
     end
   end
 end
