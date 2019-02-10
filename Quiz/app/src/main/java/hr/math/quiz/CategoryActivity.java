@@ -56,6 +56,8 @@ public class CategoryActivity extends AppCompatActivity {
         List<GameQuestion> questions = Question.getQuestions(getApplication(), level, category);
 
         game.setQuestions(questions);
+        game.setLevel(level);
+        game.setCategory(category);
 
         GameQuestion question = game.getNextQuestion();
         Intent intent;

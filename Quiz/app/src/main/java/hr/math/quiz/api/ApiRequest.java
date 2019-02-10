@@ -2,8 +2,10 @@ package hr.math.quiz.api;
 
 
 import hr.math.quiz.api.models.LeaderBoard;
+import hr.math.quiz.api.models.Result;
 import hr.math.quiz.api.models.Session;
 import hr.math.quiz.api.models.User;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -34,5 +36,11 @@ public class ApiRequest {
         Call<LeaderBoard> leaderBoardCall = service.getScores();
 
         return leaderBoardCall;
+    }
+
+    public static Call<ResponseBody> upgradeLevel(Result result, String Authorization) {
+        Call<ResponseBody> levelCall = service.upgradeLevel(result, Authorization);
+
+        return levelCall;
     }
 }

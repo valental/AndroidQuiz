@@ -32,4 +32,6 @@
     <string name="home">Home</string>
     <string name="bestPlayers">Best Players</string>
     <string name="scores_not_available">Scores are not available at the moment.</string>
+    <string name="score_update_not_possible">It is not possible to update level at the moment.</string>
+    <string name="level_updated_successfully">Level updated successfully.</string>
 </resources>
