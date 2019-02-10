@@ -7,6 +7,8 @@ import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
@@ -34,17 +36,36 @@ public class LoginActivity extends AppCompatActivity {
         if (validator.ValidateUsername(username)) {
             usernameET.setBackgroundColor(Color.TRANSPARENT);
         } else {
+            String string = getResources().getString(R.string.usernameError);
+            ForegroundColorSpan fgcspan = new ForegroundColorSpan(colorFailed);
+            SpannableStringBuilder ssbuilder = new SpannableStringBuilder(string);
+            ssbuilder.setSpan(fgcspan, 0, string.length(), 0);
+
+            usernameET.requestFocus();
+            usernameET.setError(ssbuilder);
+            validationSucceful = false;
+            /*
             usernameET.setBackgroundColor(colorFailed);
             MakeToastShort(R.string.usernameError);
-            validationSucceful = false;
+            validationSucceful = false;*/
         }
 
         if (validator.ValidatePassword(password)) {
             passwordET.setBackgroundColor(Color.TRANSPARENT);
         } else {
+            String string = getResources().getString(R.string.passwordError);
+            ForegroundColorSpan fgcspan = new ForegroundColorSpan(colorFailed);
+            SpannableStringBuilder ssbuilder = new SpannableStringBuilder(string);
+            ssbuilder.setSpan(fgcspan, 0, string.length(), 0);
+
+            passwordET.requestFocus();
+            passwordET.setError(ssbuilder);
+            validationSucceful = false;
+
+            /*
             passwordET.setBackgroundColor(colorFailed);
             MakeToastShort(R.string.passwordError);
-            validationSucceful = false;
+            validationSucceful = false;*/
         }
 
         if (validationSucceful == false) return;
