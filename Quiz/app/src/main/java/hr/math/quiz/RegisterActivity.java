@@ -34,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         if (!username.isEmpty()) {
             Intent intent = new Intent(this, MainActivity.class);
+            finish();
             startActivity(intent);
         }
     }

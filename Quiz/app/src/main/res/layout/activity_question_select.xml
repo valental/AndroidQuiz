@@ -9,15 +9,14 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="8dp"
+        android:layout_gravity="center"
         android:max="10000"
         android:progress="3000"
         android:progressTint="#00aa00"
-        android:layout_gravity="center"
-
         android:scaleY="2" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/questionTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -28,26 +27,30 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/answerBtn1"
         android:layout_width="match_parent"
         android:layout_height="65dp"
+        android:onClick="answerOnClick"
         android:text="Button" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/answerBtn2"
         android:layout_width="match_parent"
         android:layout_height="65dp"
+        android:onClick="answerOnClick"
         android:text="Button" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/answerBtn3"
         android:layout_width="match_parent"
         android:layout_height="65dp"
+        android:onClick="answerOnClick"
         android:text="Button" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/answerBtn4"
         android:layout_width="match_parent"
         android:layout_height="65dp"
+        android:onClick="answerOnClick"
         android:text="Button" />
 </LinearLayout>

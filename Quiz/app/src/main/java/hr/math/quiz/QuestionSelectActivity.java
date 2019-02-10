@@ -5,8 +5,13 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import hr.math.quiz.entities.GameQuestion;
 import hr.math.quiz.entities.Question;
@@ -17,19 +22,34 @@ public class QuestionSelectActivity extends AppCompatActivity {
     ProgressBar progressBar;
     Handler handler = new Handler();
     long start = System.currentTimeMillis();
+    Game game;
+    // Thread safe boolean
+    AtomicBoolean done = new AtomicBoolean(false);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_select);
 
-        Game game = Game.getInstance();
+        game = Game.getInstance();
         myQuestion = game.getCurrentQuestion();
+
+        TextView textView = findViewById(R.id.questionTextView);
+        Button btn1 = findViewById(R.id.answerBtn1);
+        Button btn2 = findViewById(R.id.answerBtn2);
+        Button btn3 = findViewById(R.id.answerBtn3);
+        Button btn4 = findViewById(R.id.answerBtn4);
+
+        textView.setText(myQuestion.text);
+        btn1.setText(myQuestion.answer1);
+        btn2.setText(myQuestion.answer2);
+        btn3.setText(myQuestion.answer3);
+        btn4.setText(myQuestion.answer4);
 
         ProgressBarSetup();
     }
 
-    private void ProgressBarSetup(){
+    private void ProgressBarSetup() {
         progressBar = findViewById(R.id.questionProgressBar);
         progressBar.setMax(10000);
 
@@ -53,7 +73,11 @@ public class QuestionSelectActivity extends AppCompatActivity {
                 //---hides the progress bar---
                 handler.post(new Runnable() {
                     public void run() {
-                        OpenNextActivity();
+                        if (done.compareAndSet(false, true)) {
+                            // set the incorrect answer
+                            game.setNextAnswer(-1);
+                            OpenNextActivity();
+                        }
                     }
                 });
             }
@@ -70,9 +94,6 @@ public class QuestionSelectActivity extends AppCompatActivity {
     }
 
     private void OpenNextActivity() {
-        Game game = Game.getInstance();
-        // set the incorrect answer
-        game.setNextAnswer(-1);
         GameQuestion question = game.getNextQuestion();
         Intent intent;
         if (question == null) {
@@ -85,10 +106,12 @@ public class QuestionSelectActivity extends AppCompatActivity {
                     intent = new Intent(this, QuestionSelectActivity.class);
                     break;
                 case 1:
-                    intent = new Intent(this, QuestionInputActivity.class);
+                    intent = new Intent(this, QuestionSelectActivity.class);
+                    //intent = new Intent(this, QuestionInputActivity.class);
                     break;
                 case 2:
-                    intent = new Intent(this, QuestionDropdownActivity.class);
+                    intent = new Intent(this, QuestionSelectActivity.class);
+                    //intent = new Intent(this, QuestionDropdownActivity.class);
                     break;
                 default:
                     return;
@@ -96,5 +119,27 @@ public class QuestionSelectActivity extends AppCompatActivity {
         }
         finish();
         startActivity(intent);
+    }
+
+    public void answerOnClick(View view) {
+        if (done.compareAndSet(false, true)) {
+            switch (view.getId()) {
+                case R.id.answerBtn1:
+                    game.setNextAnswer(1);
+                    break;
+                case R.id.answerBtn2:
+                    game.setNextAnswer(2);
+                    break;
+                case R.id.answerBtn3:
+                    game.setNextAnswer(3);
+                    break;
+                case R.id.answerBtn4:
+                    game.setNextAnswer(4);
+                    break;
+                default:
+                    throw new RuntimeException("Unknow button ID");
+            }
+            OpenNextActivity();
+        }
     }
 }

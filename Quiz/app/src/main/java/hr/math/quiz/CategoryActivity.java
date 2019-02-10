@@ -53,7 +53,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         int level = preferencesManager.loadLevel(category);
 
-        List<GameQuestion> questions = Question.getQuestions(getApplication(), level, category);
+        List<GameQuestion> questions = Question.getQuestions(getApplication(), 1, category);
 
         game.setQuestions(questions);
 
