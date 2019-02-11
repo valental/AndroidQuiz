@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import hr.math.quiz.api.ApiRequest;
 import hr.math.quiz.entities.GameQuestion;
 
 public class QuestionDropdownActivity extends AppCompatActivity {
@@ -47,6 +48,7 @@ public class QuestionDropdownActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.logout:
                     PreferencesManager preferencesManager = new PreferencesManager(this);
+                    ApiRequest.logoutUser(preferencesManager.loadSessionToken());
                     preferencesManager.ClearPreferences();
                     Intent intentLogin = new Intent(this, LoginActivity.class);
                     finish();

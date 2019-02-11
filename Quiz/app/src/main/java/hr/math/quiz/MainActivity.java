@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import hr.math.quiz.api.ApiRequest;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     {
         if (R.id.logout == item.getItemId()) {
             PreferencesManager preferencesManager = new PreferencesManager(this);
+            ApiRequest.logoutUser(preferencesManager.loadSessionToken());
             preferencesManager.ClearPreferences();
             Intent intent = new Intent(this, LoginActivity.class);
             finish();

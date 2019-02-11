@@ -12,6 +12,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import hr.math.quiz.api.ApiRequest;
 import hr.math.quiz.entities.GameQuestion;
 import hr.math.quiz.entities.Progress;
 import hr.math.quiz.entities.Question;
@@ -99,6 +100,7 @@ public class CategoryActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.logout:
                 PreferencesManager preferencesManager = new PreferencesManager(this);
+                ApiRequest.logoutUser(preferencesManager.loadSessionToken());
                 preferencesManager.ClearPreferences();
                 Intent intentLogin = new Intent(this, LoginActivity.class);
                 finish();

@@ -108,6 +108,7 @@ public class AllScoresActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.logout:
                 PreferencesManager preferencesManager = new PreferencesManager(this);
+                ApiRequest.logoutUser(preferencesManager.loadSessionToken());
                 preferencesManager.ClearPreferences();
                 Intent intentLogin = new Intent(this, LoginActivity.class);
                 finish();

@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import hr.math.quiz.api.ApiRequest;
 import hr.math.quiz.entities.Question;
 
 public class MyScoresActivity extends AppCompatActivity {
@@ -76,6 +77,7 @@ public class MyScoresActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.logout:
                 PreferencesManager preferencesManager = new PreferencesManager(this);
+                ApiRequest.logoutUser(preferencesManager.loadSessionToken());
                 preferencesManager.ClearPreferences();
                 Intent intentLogin = new Intent(this, LoginActivity.class);
                 finish();

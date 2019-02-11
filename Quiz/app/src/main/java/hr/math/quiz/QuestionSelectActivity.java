@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import hr.math.quiz.api.ApiRequest;
 import hr.math.quiz.entities.GameQuestion;
 import hr.math.quiz.entities.Question;
 
@@ -166,6 +167,7 @@ public class QuestionSelectActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.logout:
                     PreferencesManager preferencesManager = new PreferencesManager(this);
+                    ApiRequest.logoutUser(preferencesManager.loadSessionToken());
                     preferencesManager.ClearPreferences();
                     Intent intentLogin = new Intent(this, LoginActivity.class);
                     finish();
