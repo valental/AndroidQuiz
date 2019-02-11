@@ -22,34 +22,20 @@ class User < ApplicationRecord
                 COALESCE(sport_1, 0) + COALESCE(sport_2, 0) + COALESCE(sport_3, 0) asc')
   end
 
-  def self.best_movie
-    User.order('movie desc').
-         order('COALESCE(movie_1, 0) + COALESCE(movie_2, 0) + COALESCE(movie_3, 0) asc').
-         where('movie > 1').limit(3)
+  def self.best(category)
+    User.order("#{category} desc").
+         order("COALESCE(#{category}_1, 0) + COALESCE(#{category}_2, 0) + COALESCE(#{category}_3, 0) asc").
+         where("#{category} > 1").limit(3)
   end
 
-  def self.best_history_art
-    User.order('history_art desc').
-         order('COALESCE(history_art_1, 0) + COALESCE(history_art_2, 0) + COALESCE(history_art_3, 0) asc').
-         where('history_art > 1').limit(3)
-  end
+  def self.best_usernames(category)
+    pl_1, pl_2, pl_3 = self.best(category)
 
-  def self.best_science
-    User.order('science desc').
-         order('COALESCE(science_1, 0) + COALESCE(science_2, 0) + COALESCE(science_3, 0) asc').
-         where('science > 1').limit(3)
-  end
+    username_1 = pl_1 ? pl_1.username : '-'
+    username_2 = pl_2 ? pl_2.username : '-'
+    username_3 = pl_3 ? pl_3.username : '-'
 
-  def self.best_geography
-    User.order('geography desc').
-         order('COALESCE(geography_1, 0) + COALESCE(geography_2, 0) + COALESCE(geography_3, 0) asc').
-         where('geography > 1').limit(3)
-  end
-
-  def self.best_sport
-    User.order('sport desc').
-         order('COALESCE(sport_1, 0) + COALESCE(sport_2, 0) + COALESCE(sport_3, 0) asc').
-         where('sport > 1').limit(3)
+    [username_1, username_2, username_3]
   end
 
   def progress
@@ -85,6 +71,6 @@ class User < ApplicationRecord
   end
 
   def to_s
-    "id: #{id}, username: #{username}, lvl_score: #{science}, time: #{science_time}"
+    "id: #{id}, username: #{username}, lvl_score: #{lvl_score}, time: #{time}"
   end
 end

@@ -81,30 +81,11 @@ module Api
 
     # GET /api/scores
     def scores
-      r_movie = User.best_movie
-      user_movie_1 = r_movie[0] ? r_movie[0].username : '-'
-      user_movie_2 = r_movie[1] ? r_movie[1].username : '-'
-      user_movie_3 = r_movie[2] ? r_movie[2].username : '-'
-
-      r_science = User.best_science
-      user_science_1 = r_science[0] ? r_science[0].username : '-'
-      user_science_2 = r_science[1] ? r_science[1].username : '-'
-      user_science_3 = r_science[2] ? r_science[2].username : '-'
-
-      r_history_art = User.best_history_art
-      user_history_art_1 = r_history_art[0] ? r_history_art[0].username : '-'
-      user_history_art_2 = r_history_art[1] ? r_history_art[1].username : '-'
-      user_history_art_3 = r_history_art[2] ? r_history_art[2].username : '-'
-
-      r_geography = User.best_geography
-      user_geography_1 = r_geography[0] ? r_geography[0].username : '-'
-      user_geography_2 = r_geography[1] ? r_geography[1].username : '-'
-      user_geography_3 = r_geography[2] ? r_geography[2].username : '-'
-
-      r_sport = User.best_sport
-      user_sport_1 = r_sport[0] ? r_sport[0].username : '-'
-      user_sport_2 = r_sport[1] ? r_sport[1].username : '-'
-      user_sport_3 = r_sport[2] ? r_sport[2].username : '-'
+      user_sport_1, user_sport_2, user_sport_3 = User.best_usernames('sport')
+      user_movie_1, user_movie_2, user_movie_3 = User.best_usernames('movie')
+      user_science_1, user_science_2, user_science_3 = User.best_usernames('science')
+      user_geography_1, user_geography_2, user_geography_3 = User.best_usernames('geography')
+      user_history_art_1, user_history_art_2, user_history_art_3 = User.best_usernames('history_art')
 
       render json: { user_movie_1: user_movie_1, user_movie_2: user_movie_2, user_movie_3: user_movie_3,
                      user_science_1: user_science_1, user_science_2: user_science_2, user_science_3: user_science_3,
