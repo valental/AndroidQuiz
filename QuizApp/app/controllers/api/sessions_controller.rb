@@ -11,6 +11,9 @@ module Api
           render json: { errors: { email: ['has not been confirmed'] } },
                  status: :unprocessable_entity
         else
+          user.regenerate_token
+          Token.create(user: user, token: user.token)
+
           render json: { id: user.id, username: user.username, token: user.token,
                          sport: user.sport, geography: user.geography, science: user.science,
                          history_art: user.history_art, movie: user.movie },
@@ -24,7 +27,7 @@ module Api
 
     # DELETE /api/session
     def destroy
-      current_user.regenerate_token
+      headers_token.delete
 
       head :no_content
     end
