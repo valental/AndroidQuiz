@@ -4,15 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
-import android.support.v7.widget.Toolbar;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import hr.math.quiz.api.ApiRequest;
+import hr.math.quiz.helpers.PreferencesManager;
 
 public class MainActivity extends AppCompatActivity {
 

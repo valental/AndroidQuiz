@@ -1,4 +1,4 @@
-package hr.math.quiz;
+package hr.math.quiz.game.activities;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -12,10 +12,15 @@ import android.widget.ProgressBar;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import hr.math.quiz.LoginActivity;
+import hr.math.quiz.MainActivity;
+import hr.math.quiz.helpers.PreferencesManager;
+import hr.math.quiz.R;
 import hr.math.quiz.api.ApiRequest;
-import hr.math.quiz.entities.GameQuestion;
+import hr.math.quiz.game.models.Game;
+import hr.math.quiz.game.models.GameQuestion;
 
-public class QuestionDropdownActivity extends AppCompatActivity {
+public class QuestionInputActivity extends AppCompatActivity {
 
     GameQuestion myQuestion;
     ProgressBar progressBar;
@@ -28,7 +33,7 @@ public class QuestionDropdownActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_dropdown);
+        setContentView(R.layout.activity_question_input);
     }
 
     @Override

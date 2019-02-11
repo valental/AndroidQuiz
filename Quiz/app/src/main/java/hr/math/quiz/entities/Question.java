@@ -1,14 +1,13 @@
 package hr.math.quiz.entities;
 
 import android.app.Application;
-import android.content.Context;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 import hr.math.quiz.App;
+import hr.math.quiz.game.models.GameQuestion;
 import io.objectbox.Box;
 import io.objectbox.annotation.Convert;
 import io.objectbox.annotation.Entity;

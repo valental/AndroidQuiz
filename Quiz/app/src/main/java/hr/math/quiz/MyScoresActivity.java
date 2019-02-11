@@ -1,7 +1,6 @@
 package hr.math.quiz;
 
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
@@ -13,6 +12,7 @@ import android.widget.TextView;
 
 import hr.math.quiz.api.ApiRequest;
 import hr.math.quiz.entities.Question;
+import hr.math.quiz.helpers.PreferencesManager;
 
 public class MyScoresActivity extends AppCompatActivity {
 

@@ -9,15 +9,17 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import hr.math.quiz.api.ApiRequest;
-import hr.math.quiz.entities.GameQuestion;
-import hr.math.quiz.entities.Progress;
+import hr.math.quiz.game.activities.GameFinishedActivity;
+import hr.math.quiz.game.activities.QuestionDropdownActivity;
+import hr.math.quiz.game.activities.QuestionInputActivity;
+import hr.math.quiz.game.activities.QuestionSelectActivity;
+import hr.math.quiz.game.models.Game;
+import hr.math.quiz.game.models.GameQuestion;
 import hr.math.quiz.entities.Question;
-import hr.math.quiz.entities.Question_;
-import io.objectbox.Box;
+import hr.math.quiz.helpers.PreferencesManager;
 
 public class CategoryActivity extends AppCompatActivity {
 
