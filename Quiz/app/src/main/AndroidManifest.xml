@@ -24,10 +24,10 @@
         <activity android:name=".MyScoresActivity" />
         <activity android:name=".AllScoresActivity" />
         <activity android:name=".CategoryActivity" />
-        <activity android:name=".QuestionSelectActivity" />
-        <activity android:name=".QuestionInputActivity" />
-        <activity android:name=".GameFinishedActivity" />
-        <activity android:name=".QuestionDropdownActivity"></activity>
+        <activity android:name=".game.activities.QuestionSelectActivity" />
+        <activity android:name=".game.activities.QuestionInputActivity" />
+        <activity android:name=".game.activities.GameFinishedActivity" />
+        <activity android:name=".game.activities.QuestionDropdownActivity"></activity>
     </application>
 
 </manifest>

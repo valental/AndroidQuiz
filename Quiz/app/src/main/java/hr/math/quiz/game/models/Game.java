@@ -1,9 +1,8 @@
-package hr.math.quiz;
+package hr.math.quiz.game.models;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import hr.math.quiz.entities.GameQuestion;
 import hr.math.quiz.entities.Question;
 
 public class Game {

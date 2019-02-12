@@ -1,7 +1,6 @@
 package hr.math.quiz;
 
 import android.content.Intent;
-import android.graphics.drawable.GradientDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
@@ -14,12 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import hr.math.quiz.api.ApiRequest;
 import hr.math.quiz.api.models.LeaderBoard;
-import hr.math.quiz.api.models.Session;
+import hr.math.quiz.helpers.PreferencesManager;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -108,6 +104,7 @@ public class AllScoresActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.logout:
                 PreferencesManager preferencesManager = new PreferencesManager(this);
+                ApiRequest.logoutUser(preferencesManager.loadSessionToken());
                 preferencesManager.ClearPreferences();
                 Intent intentLogin = new Intent(this, LoginActivity.class);
                 finish();

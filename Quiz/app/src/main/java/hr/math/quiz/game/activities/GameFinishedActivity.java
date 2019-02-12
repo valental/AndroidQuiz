@@ -1,13 +1,15 @@
-package hr.math.quiz;
+package hr.math.quiz.game.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import hr.math.quiz.R;
 import hr.math.quiz.api.ApiRequest;
-import hr.math.quiz.api.models.LeaderBoard;
 import hr.math.quiz.api.models.Result;
+import hr.math.quiz.game.models.Game;
+import hr.math.quiz.helpers.PreferencesManager;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;

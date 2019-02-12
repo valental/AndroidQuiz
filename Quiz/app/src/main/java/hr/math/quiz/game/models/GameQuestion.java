@@ -1,4 +1,6 @@
-package hr.math.quiz.entities;
+package hr.math.quiz.game.models;
+
+import hr.math.quiz.entities.IQuestion;
 
 public class GameQuestion {
     public String text;

@@ -1,4 +1,4 @@
-package hr.math.quiz;
+package hr.math.quiz.helpers;
 
 import java.util.regex.Pattern;
 

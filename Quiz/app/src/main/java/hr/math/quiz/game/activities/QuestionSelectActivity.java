@@ -1,11 +1,10 @@
-package hr.math.quiz;
+package hr.math.quiz.game.activities;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,12 +12,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import hr.math.quiz.entities.GameQuestion;
-import hr.math.quiz.entities.Question;
+import hr.math.quiz.LoginActivity;
+import hr.math.quiz.MainActivity;
+import hr.math.quiz.helpers.PreferencesManager;
+import hr.math.quiz.R;
+import hr.math.quiz.api.ApiRequest;
+import hr.math.quiz.game.models.Game;
+import hr.math.quiz.game.models.GameQuestion;
 
 public class QuestionSelectActivity extends AppCompatActivity {
 
@@ -166,6 +169,7 @@ public class QuestionSelectActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.logout:
                     PreferencesManager preferencesManager = new PreferencesManager(this);
+                    ApiRequest.logoutUser(preferencesManager.loadSessionToken());
                     preferencesManager.ClearPreferences();
                     Intent intentLogin = new Intent(this, LoginActivity.class);
                     finish();
