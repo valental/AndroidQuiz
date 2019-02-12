@@ -11,7 +11,11 @@ module Api
     rescue_from ActionController::ParameterMissing, with: :render_missing
 
     def current_user
-      @current_user ||= User.find_by(token: request.headers['Authorization'])
+      @current_user ||= headers_token&.user
+    end
+
+    def headers_token
+      @headers_token ||= Token.find_by(token: request.headers['Authorization'])
     end
 
     def ensure_authenticated
