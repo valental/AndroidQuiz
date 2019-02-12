@@ -75,13 +75,13 @@ public class AllScoresActivity extends AppCompatActivity {
             TextView position = new TextView(this);
             position.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT));
             position.setText(Integer.toString(i+1) + ". ");
-            position.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 23);
+            position.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
             linearLayout.addView(position);
 
             TextView player = new TextView(this);
             player.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
             player.setText(players[i]);
-            player.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 23);
+            player.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
             linearLayout.addView(player);
 
             innerContainer.addView(linearLayout);

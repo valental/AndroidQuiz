@@ -4,30 +4,6 @@
   "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
   "entities": [
     {
-      "id": "1:3274608581590621070",
-      "lastPropertyId": "5:3230581708370492576",
-      "name": "Progress",
-      "properties": [
-        {
-          "id": "1:829738983838821259",
-          "name": "id"
-        },
-        {
-          "id": "3:1516122996780769177",
-          "name": "category"
-        },
-        {
-          "id": "4:7896726398441086315",
-          "name": "currentLevel"
-        },
-        {
-          "id": "5:3230581708370492576",
-          "name": "username"
-        }
-      ],
-      "relations": []
-    },
-    {
       "id": "2:6920791724100069047",
       "lastPropertyId": "7:9070882054235164765",
       "name": "Question",
@@ -136,10 +112,16 @@
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
-  "retiredEntityUids": [],
+  "retiredEntityUids": [
+    3274608581590621070
+  ],
   "retiredIndexUids": [],
   "retiredPropertyUids": [
-    2764801801346112703
+    2764801801346112703,
+    829738983838821259,
+    1516122996780769177,
+    7896726398441086315,
+    3230581708370492576
   ],
   "retiredRelationUids": [],
   "version": 1

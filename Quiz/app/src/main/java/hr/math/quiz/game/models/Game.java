@@ -1,5 +1,7 @@
 package hr.math.quiz.game.models;
 
+import android.util.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,13 +65,21 @@ public class Game {
     public int numberOfCorrectAnswers() {
         int correct = 0;
 
-        for(int i = 0; i < questions.size(); i++) {
-            if(questions.get(i).correct == answersInt.get(i)) {
+        for (int i = 0; i < questions.size(); i++) {
+            if (questions.get(i).correct == answersInt.get(i)) {
                 correct++;
             }
         }
 
         return correct;
+    }
+
+    public List<Pair<String, Boolean>> getReport() {
+        List<Pair<String, Boolean>> report = new ArrayList<Pair<String, Boolean>>();
+        for (int i = 0; i < questions.size(); i++) {
+            report.add(new Pair<String, Boolean>(questions.get(i).text, questions.get(i).correct == answersInt.get(i)));
+        }
+        return report;
     }
 
     public boolean allCorrect() {
