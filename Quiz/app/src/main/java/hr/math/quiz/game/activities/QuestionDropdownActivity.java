@@ -46,15 +46,15 @@ public class QuestionDropdownActivity extends AppCompatActivity implements Adapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_dropdown);
 
-        ProgressBarSetup();
         game = Game.getInstance();
         myQuestion = game.getCurrentQuestion();
 
-        //String s = "vdsgf gdfh dfhhdfgsgdfdfhdf fddfgfgdfhsdfgd fsdgf d df gsd fsd hdf  dgdfhfdhdf d fgdfdfnsdkgnfdkg  luka_valenta fddfgfgdfhsdfgd fsdgf d df gsd fsd hdf  dgdfhfdhdf d fgdfdfnsdkgnfdkg dsnkgns lds?";
         String[] textParts = myQuestion.text.split("_");
-        splitAndAdd(textParts[0]);
+        if (textParts.length > 0) splitAndAdd(textParts[0]);
         addSpinner();
-        splitAndAdd(textParts[1]);
+        if (textParts.length > 1) splitAndAdd(textParts[1]);
+
+        ProgressBarSetup();
     }
 
     private void splitAndAdd(String s) {

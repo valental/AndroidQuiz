@@ -35,4 +35,5 @@
     <string name="scores_not_available">Rezultati trenutno nedostupni.</string>
     <string name="score_update_not_possible">Nismo u mogućnosti ažurirati dostignutu razinu.</string>
     <string name="level_updated_successfully">Dostignuta razina ažurirana.</string>
+    <string name="submit">Predaj</string>
 </resources>

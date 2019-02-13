@@ -316,12 +316,12 @@ public class App extends Application {
 
         questionBox.put(question);
 
-        qhr = new QuestionHR(32, "U kemiji srebro se označava s?", "S", "Ag", "Sr", "Se");
-        qen = new QuestionEN(32, "In chemistry silver is denoted by?", "S", "Ag", "Sr", "Se");
+        qhr = new QuestionHR(32, "U kemiji srebro se označava s _", "S", "Ag", "Sr", "Se");
+        qen = new QuestionEN(32, "In chemistry silver is denoted by _", "S", "Ag", "Sr", "Se");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
-        question = new Question(32, 1, 1, 2, Question.Category.SCIENCE, hrId, enId);
+        question = new Question(32, 1, 3, 2, Question.Category.SCIENCE, hrId, enId);
 
         questionBox.put(question);
 
