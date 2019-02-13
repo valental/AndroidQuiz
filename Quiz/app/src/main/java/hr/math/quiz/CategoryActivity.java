@@ -73,10 +73,10 @@ public class CategoryActivity extends AppCompatActivity {
                 case 1:
                     intent = new Intent(this, QuestionSelectActivity.class);
                     break;
-                case 0:
+                case 2:
                     intent = new Intent(this, QuestionInputActivity.class);
                     break;
-                case 2:
+                case 3:
                     intent = new Intent(this, QuestionDropdownActivity.class);
                     break;
                 default:

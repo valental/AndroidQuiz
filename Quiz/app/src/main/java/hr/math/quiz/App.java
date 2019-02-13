@@ -55,12 +55,12 @@ public class App extends Application {
 
         questionBox.put(question);
 
-        qhr = new QuestionHR(3, "Najpoznatiji hrvatski košarkaš u NBA-u bio je?", "Dario Šarić", "Dražen Petrović", "Bojan Bogdanović", "Dino Rađa");
-        qen = new QuestionEN(3, "Who was the most famous Croatian basketball player in the NBA?", "Dario Šarić", "Dražen Petrović", "Bojan Bogdanović", "Dino Rađa");
+        qhr = new QuestionHR(3, "_ bio je najpoznatiji hrvatski košarkaš u NBA-u.", "Dario Šarić", "Dražen Petrović", "Bojan Bogdanović", "Dino Rađa");
+        qen = new QuestionEN(3, "_ was the most famous Croatian basketball player in the NBA.", "Dario Šarić", "Dražen Petrović", "Bojan Bogdanović", "Dino Rađa");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
-        question = new Question(3, 1, 1, 2, Question.Category.SPORT, hrId, enId);
+        question = new Question(3, 1, 2, 2, Question.Category.SPORT, hrId, enId);
 
         questionBox.put(question);
 
@@ -82,12 +82,12 @@ public class App extends Application {
 
         questionBox.put(question);
 
-        qhr = new QuestionHR(6, "Koja zemlja nije sudjelovala na prvim OI?", "Danska", "Mađarska", "Švicarska", "Rusija");
-        qen = new QuestionEN(6, "Which country did not participate in the first OG?", "Denmark", "Hungary", "Swizerland", "Russia");
+        qhr = new QuestionHR(6, "_ nije sudjelovala na prvim OI.", "Danska", "Mađarska", "Švicarska", "Rusija");
+        qen = new QuestionEN(6, "_ did not participate in the first OG?", "Denmark", "Hungary", "Swizerland", "Russia");
 
         hrId = questionHRBox.put(qhr);
         enId = questionENBox.put(qen);
-        question = new Question(6, 1, 1, 4, Question.Category.SPORT, hrId, enId);
+        question = new Question(6, 1, 2, 4, Question.Category.SPORT, hrId, enId);
 
         questionBox.put(question);
 

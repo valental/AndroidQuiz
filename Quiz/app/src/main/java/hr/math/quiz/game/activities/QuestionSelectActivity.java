@@ -110,15 +110,15 @@ public class QuestionSelectActivity extends AppCompatActivity {
         } else {
             // next question
             switch (question.type) {
-                case 0:
-                    intent = new Intent(this, QuestionSelectActivity.class);
-                    break;
                 case 1:
                     intent = new Intent(this, QuestionSelectActivity.class);
-                    //intent = new Intent(this, QuestionInputActivity.class);
                     break;
                 case 2:
-                    intent = new Intent(this, QuestionSelectActivity.class);
+                    intent = new Intent(this, QuestionDropdownActivity.class);
+                    //intent = new Intent(this, QuestionInputActivity.class);
+                    break;
+                case 3:
+                    intent = new Intent(this, QuestionInputActivity.class);
                     //intent = new Intent(this, QuestionDropdownActivity.class);
                     break;
                 default:
