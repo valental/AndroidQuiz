@@ -5,22 +5,18 @@
 
     <item android:id="@android:id/background">
         <shape>
-            <corners android:radius="2dip" /> <!--optional-->
-            <gradient
+            <solid
                 android:angle="270"
-                android:endColor="@color/sportColorLight"
-                android:startColor="@color/sportColorLight" />
+                android:color="#DDDDDD"/>
         </shape>
     </item>
 
     <item android:id="@android:id/progress">
         <clip>
             <shape>
-                <corners android:radius="2dip" /> <!--optional-->
-                <gradient
+                <solid
                     android:angle="270"
-                    android:endColor="@color/sportColor"
-                    android:startColor="@color/sportColor" />
+                    android:color="#00AA00"/>
             </shape>
         </clip>
     </item>
