@@ -36,8 +36,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:max="3"
-                android:progressTint="@color/moviesColor"
-                android:progressBackgroundTint="@color/moviesColorLight"
+                android:progressDrawable="@drawable/progress_bar_color_movies"
+
 
 />
 
@@ -88,8 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:max="3"
-                android:progressTint="@color/sportColor"
-                android:progressBackgroundTint="@color/sportColorLight"/>
+                android:progressDrawable="@drawable/progress_bar_color_sport"/>
 
             <TextView
                 android:id="@+id/sportProgressBarText"
@@ -139,8 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:max="3"
-                android:progressTint="@color/scienceColor"
-                android:progressBackgroundTint="@color/scienceColorLight"/>
+                android:progressDrawable="@drawable/progress_bar_color_science"/>
 
             <TextView
                 android:id="@+id/scienceProgressBarText"
@@ -189,8 +187,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:max="3"
-                android:progressTint="@color/geographyColor"
-                android:progressBackgroundTint="@color/geographyColorLight"/>
+                android:progressDrawable="@drawable/progress_bar_color_geography"/>
 
             <TextView
                 android:id="@+id/geographyProgressBarText"
@@ -240,8 +237,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:max="3"
-                android:progressTint="@color/historyAndArtColor"
-                android:progressBackgroundTint="@color/historyAndArtColorLight"
+                android:progressDrawable="@drawable/progress_bar_color_history"
                 />
 
             <TextView
