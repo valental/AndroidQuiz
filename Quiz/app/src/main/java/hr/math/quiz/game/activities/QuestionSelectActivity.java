@@ -27,23 +27,12 @@ import hr.math.quiz.api.ApiRequest;
 import hr.math.quiz.game.models.Game;
 import hr.math.quiz.game.models.GameQuestion;
 
-public class QuestionSelectActivity extends AppCompatActivity {
-
-    GameQuestion myQuestion;
-    ProgressBar progressBar;
-    Handler handler = new Handler();
-    long start = System.currentTimeMillis();
-    Game game;
-    // Thread safe boolean
-    AtomicBoolean done = new AtomicBoolean(false);
+public class QuestionSelectActivity extends QuestionBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_select);
-
-        game = Game.getInstance();
-        myQuestion = game.getCurrentQuestion();
+        super.onCreate(savedInstanceState);
 
         TextView textView = findViewById(R.id.questionTextView);
         Button btn1 = findViewById(R.id.answerBtn1);
@@ -56,81 +45,6 @@ public class QuestionSelectActivity extends AppCompatActivity {
         btn2.setText(myQuestion.answer2);
         btn3.setText(myQuestion.answer3);
         btn4.setText(myQuestion.answer4);
-
-        ProgressBarSetup();
-    }
-
-    private void ProgressBarSetup() {
-        progressBar = findViewById(R.id.questionProgressBar);
-        progressBar.setMax(10000);
-
-        //---do some work in background thread---
-        new Thread(new Runnable() {
-            public void run() {
-                long progressTime = System.currentTimeMillis() - start;
-                //-do some work here-
-                while (progressTime < 10000) {
-                    doSomeWork();
-
-                    //-Update the progress bar-
-                    handler.post(new Runnable() {
-                        public void run() {
-                            progressBar.setProgress(10000 + (int) (start - System.currentTimeMillis()));
-                        }
-                    });
-                    progressTime = System.currentTimeMillis() - start;
-                }
-
-                //---hides the progress bar---
-                handler.post(new Runnable() {
-                    public void run() {
-                        if (done.compareAndSet(false, true)) {
-                            // set the incorrect answer
-                            game.setNextAnswer(-1);
-                            game.addTime(10000);
-                            OpenNextActivity();
-                        }
-                    }
-                });
-            }
-
-            //---do some long running work here---
-            private void doSomeWork() {
-                try {
-                    Thread.sleep(50);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
-
-    private void OpenNextActivity() {
-        GameQuestion question = game.getNextQuestion();
-        Intent intent;
-        if (question == null) {
-            // no more questions
-            intent = new Intent(this, GameFinishedActivity.class);
-        } else {
-            // next question
-            switch (question.type) {
-                case 1:
-                    intent = new Intent(this, QuestionSelectActivity.class);
-                    break;
-                case 2:
-                    intent = new Intent(this, QuestionDropdownActivity.class);
-                    //intent = new Intent(this, QuestionInputActivity.class);
-                    break;
-                case 3:
-                    intent = new Intent(this, QuestionInputActivity.class);
-                    //intent = new Intent(this, QuestionDropdownActivity.class);
-                    break;
-                default:
-                    return;
-            }
-        }
-        finish();
-        startActivity(intent);
     }
 
     public void answerOnClick(View view) {
@@ -149,92 +63,10 @@ public class QuestionSelectActivity extends AppCompatActivity {
                     game.setNextAnswer(4);
                     break;
                 default:
-                    throw new RuntimeException("Unknow button ID");
+                    throw new RuntimeException("Unknown button ID");
             }
             game.addTime((int) (System.currentTimeMillis() - start));
             OpenNextActivity();
         }
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        if (menu instanceof MenuBuilder) {
-            ((MenuBuilder) menu).setOptionalIconsVisible(true);
-        }
-        super.onCreateOptionsMenu(menu);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.general_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (done.compareAndSet(false, true)) {
-            switch (item.getItemId()) {
-                case R.id.logout:
-                    PreferencesManager preferencesManager = new PreferencesManager(this);
-                    ApiRequest.logoutUser(preferencesManager.loadSessionToken());
-                    preferencesManager.ClearPreferences();
-                    Intent intentLogin = new Intent(this, LoginActivity.class);
-                    finish();
-                    startActivity(intentLogin);
-                    return true;
-                case R.id.home:
-                    Intent intentHome = new Intent(this, MainActivity.class);
-                    startActivity(intentHome);
-                    return true;
-            }
-        }
-        return false;
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        done.set(true);
-        super.onBackPressed();
-    }
-
-    @Override
-    protected void onStop() {
-        done.set(true);
-        start = System.currentTimeMillis() - start;
-        super.onStop();
-    }
-
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        done.set(true);
-//        start = System.currentTimeMillis() - start;
-//    }
-//
-//    @Override
-//    public void onPause() {
-//        if (isApplicationSentToBackground(this)){
-//            done.set(true);
-//            start = System.currentTimeMillis() - start;
-//        }
-//        super.onPause();
-//    }
-//
-//    @Override
-//    protected  void onResume() {
-//        super.onResume();
-//        done.compareAndSet(true, false);
-//        // how much time has elapsed is saved in start so we can use that value
-//        start = System.currentTimeMillis() - start;
-//    }
-//
-//    public boolean isApplicationSentToBackground(final Context context) {
-//        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-//        List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
-//        if (!tasks.isEmpty()) {
-//            ComponentName topActivity = tasks.get(0).topActivity;
-//            if (!topActivity.getPackageName().equals(context.getPackageName())) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
 }

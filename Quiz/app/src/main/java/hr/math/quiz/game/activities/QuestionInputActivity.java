@@ -1,54 +1,27 @@
 package hr.math.quiz.game.activities;
 
-import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.view.menu.MenuBuilder;
 import android.util.TypedValue;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.flexbox.FlexboxLayout;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-
-import hr.math.quiz.LoginActivity;
-import hr.math.quiz.MainActivity;
-import hr.math.quiz.helpers.PreferencesManager;
 import hr.math.quiz.R;
-import hr.math.quiz.api.ApiRequest;
-import hr.math.quiz.game.models.Game;
-import hr.math.quiz.game.models.GameQuestion;
 
 import static android.view.View.TEXT_ALIGNMENT_CENTER;
 
-public class QuestionInputActivity extends AppCompatActivity {
-
-    GameQuestion myQuestion;
-    ProgressBar progressBar;
-    Handler handler = new Handler();
-    long start = System.currentTimeMillis();
-    Game game;
-    // Thread safe boolean
-    AtomicBoolean done = new AtomicBoolean(false);
+public class QuestionInputActivity extends QuestionBaseActivity {
     EditText myEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_input);
-
-        game = Game.getInstance();
-        myQuestion = game.getCurrentQuestion();
+        super.onCreate(savedInstanceState);
 
         String[] textParts = myQuestion.text.split("_");
-
         if (textParts.length == 1) {
             if (myQuestion.text.startsWith("_")) {
                 addEditText();
@@ -62,8 +35,6 @@ public class QuestionInputActivity extends AppCompatActivity {
             addEditText();
             splitAndAdd(textParts[1]);
         }
-
-        ProgressBarSetup();
     }
 
     private void addEditText() {
@@ -76,7 +47,9 @@ public class QuestionInputActivity extends AppCompatActivity {
                         FlexboxLayout.LayoutParams.WRAP_CONTENT);
         editText.setLayoutParams(wrap);
         editText.setWidth(100);
-        editText.setTextAlignment(TEXT_ALIGNMENT_CENTER);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            editText.setTextAlignment(TEXT_ALIGNMENT_CENTER);
+        }
 
         myEditText = editText;
         flexboxLayout.addView(editText);
@@ -103,111 +76,6 @@ public class QuestionInputActivity extends AppCompatActivity {
         textView.setLayoutParams(wrap);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
         flexboxLayout.addView(textView);
-    }
-
-    private void OpenNextActivity() {
-        GameQuestion question = game.getNextQuestion();
-        Intent intent;
-        if (question == null) {
-            // no more questions
-            intent = new Intent(this, GameFinishedActivity.class);
-        } else {
-            // next question
-            switch (question.type) {
-                case 1:
-                    intent = new Intent(this, QuestionSelectActivity.class);
-                    break;
-                case 2:
-                    intent = new Intent(this, QuestionDropdownActivity.class);
-                    //intent = new Intent(this, QuestionInputActivity.class);
-                    break;
-                case 3:
-                    intent = new Intent(this, QuestionInputActivity.class);
-                    //intent = new Intent(this, QuestionDropdownActivity.class);
-                    break;
-                default:
-                    return;
-            }
-        }
-        finish();
-        startActivity(intent);
-    }
-
-    private void ProgressBarSetup() {
-        progressBar = findViewById(R.id.questionProgressBar);
-        progressBar.setMax(10000);
-
-        //---do some work in background thread---
-        new Thread(new Runnable() {
-            public void run() {
-                long progressTime = System.currentTimeMillis() - start;
-                //-do some work here-
-                while (progressTime < 10000) {
-                    doSomeWork();
-
-                    //-Update the progress bar-
-                    handler.post(new Runnable() {
-                        public void run() {
-                            progressBar.setProgress(10000 + (int) (start - System.currentTimeMillis()));
-                        }
-                    });
-                    progressTime = System.currentTimeMillis() - start;
-                }
-
-                //---hides the progress bar---
-                handler.post(new Runnable() {
-                    public void run() {
-                        if (done.compareAndSet(false, true)) {
-                            // set the incorrect answer
-                            game.setNextAnswer(-1);
-                            game.addTime(10000);
-                            OpenNextActivity();
-                        }
-                    }
-                });
-            }
-
-            //---do some long running work here---
-            private void doSomeWork() {
-                try {
-                    Thread.sleep(50);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        if (menu instanceof MenuBuilder) {
-            ((MenuBuilder) menu).setOptionalIconsVisible(true);
-        }
-        super.onCreateOptionsMenu(menu);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.general_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (done.compareAndSet(false, true)) {
-            switch (item.getItemId()) {
-                case R.id.logout:
-                    PreferencesManager preferencesManager = new PreferencesManager(this);
-                    ApiRequest.logoutUser(preferencesManager.loadSessionToken());
-                    preferencesManager.ClearPreferences();
-                    Intent intentLogin = new Intent(this, LoginActivity.class);
-                    finish();
-                    startActivity(intentLogin);
-                    return true;
-                case R.id.home:
-                    Intent intentHome = new Intent(this, MainActivity.class);
-                    startActivity(intentHome);
-                    return true;
-            }
-        }
-        return false;
     }
 
     public void submitBtnClick(View view) {
