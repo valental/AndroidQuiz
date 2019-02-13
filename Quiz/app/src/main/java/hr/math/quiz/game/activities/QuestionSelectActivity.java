@@ -1,5 +1,8 @@
 package hr.math.quiz.game.activities;
 
+import android.app.ActivityManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +16,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import hr.math.quiz.LoginActivity;
@@ -184,4 +188,53 @@ public class QuestionSelectActivity extends AppCompatActivity {
         return false;
 
     }
+
+    @Override
+    public void onBackPressed() {
+        done.set(true);
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onStop() {
+        done.set(true);
+        start = System.currentTimeMillis() - start;
+        super.onStop();
+    }
+
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        done.set(true);
+//        start = System.currentTimeMillis() - start;
+//    }
+//
+//    @Override
+//    public void onPause() {
+//        if (isApplicationSentToBackground(this)){
+//            done.set(true);
+//            start = System.currentTimeMillis() - start;
+//        }
+//        super.onPause();
+//    }
+//
+//    @Override
+//    protected  void onResume() {
+//        super.onResume();
+//        done.compareAndSet(true, false);
+//        // how much time has elapsed is saved in start so we can use that value
+//        start = System.currentTimeMillis() - start;
+//    }
+//
+//    public boolean isApplicationSentToBackground(final Context context) {
+//        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+//        List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
+//        if (!tasks.isEmpty()) {
+//            ComponentName topActivity = tasks.get(0).topActivity;
+//            if (!topActivity.getPackageName().equals(context.getPackageName())) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 }
