@@ -127,32 +127,36 @@ public class GameFinishedActivity extends AppCompatActivity {
         Game game = Game.getInstance();
         List<Pair<String, Boolean>> report = game.getReport();
 
-        setTextViewText(R.id.questionText1, report.get(0).first);
-        setTextViewText(R.id.questionText2, report.get(1).first);
-        setTextViewText(R.id.questionText3, report.get(2).first);
-        setTextViewText(R.id.questionText4, report.get(3).first);
-        setTextViewText(R.id.questionText5, report.get(4).first);
-        setTextViewText(R.id.questionText6, report.get(5).first);
-        setTextViewText(R.id.questionText7, report.get(6).first);
-        setTextViewText(R.id.questionText8, report.get(7).first);
-        setTextViewText(R.id.questionText9, report.get(8).first);
-        setTextViewText(R.id.questionText10, report.get(9).first);
-
-        setTextViewText(R.id.correct1, toCorrect(report.get(0).second));
-        setTextViewText(R.id.correct2, toCorrect(report.get(1).second));
-        setTextViewText(R.id.correct3, toCorrect(report.get(2).second));
-        setTextViewText(R.id.correct4, toCorrect(report.get(3).second));
-        setTextViewText(R.id.correct5, toCorrect(report.get(4).second));
-        setTextViewText(R.id.correct6, toCorrect(report.get(5).second));
-        setTextViewText(R.id.correct7, toCorrect(report.get(6).second));
-        setTextViewText(R.id.correct8, toCorrect(report.get(7).second));
-        setTextViewText(R.id.correct9, toCorrect(report.get(8).second));
-        setTextViewText(R.id.correct10, toCorrect(report.get(9).second));
+        setTextViewText(R.id.row1,R.id.questionText1, report.get(0).first,toCorrect(report.get(0).second));
+        setTextViewText(R.id.row2,R.id.questionText2, report.get(1).first,toCorrect(report.get(1).second));
+        setTextViewText(R.id.row3,R.id.questionText3, report.get(2).first,toCorrect(report.get(2).second));
+        setTextViewText(R.id.row4,R.id.questionText4, report.get(3).first,toCorrect(report.get(3).second));
+        setTextViewText(R.id.row5,R.id.questionText5, report.get(4).first,toCorrect(report.get(4).second));
+        setTextViewText(R.id.row6,R.id.questionText6, report.get(5).first,toCorrect(report.get(5).second));
+        setTextViewText(R.id.row7,R.id.questionText7, report.get(6).first,toCorrect(report.get(6).second));
+        setTextViewText(R.id.row8,R.id.questionText8, report.get(7).first,toCorrect(report.get(7).second));
+        setTextViewText(R.id.row9,R.id.questionText9, report.get(8).first,toCorrect(report.get(8).second));
+        setTextViewText(R.id.row10,R.id.questionText10, report.get(9).first,toCorrect(report.get(9).second));
+/*
+        setTextViewText(R.id.row1,R.id.correct1, toCorrect(report.get(0).second));
+        setTextViewText(R.id.row2,R.id.correct2, toCorrect(report.get(1).second));
+        setTextViewText(R.id.row3,R.id.correct3, toCorrect(report.get(2).second));
+        setTextViewText(R.id.row4,R.id.correct4, toCorrect(report.get(3).second));
+        setTextViewText(R.id.row5,R.id.correct5, toCorrect(report.get(4).second));
+        setTextViewText(R.id.row6,R.id.correct6, toCorrect(report.get(5).second));
+        setTextViewText(R.id.row7,R.id.correct7, toCorrect(report.get(6).second));
+        setTextViewText(R.id.row8,R.id.correct8, toCorrect(report.get(7).second));
+        setTextViewText(R.id.row9,R.id.correct9, toCorrect(report.get(8).second));
+        setTextViewText(R.id.row10,R.id.correct10, toCorrect(report.get(9).second));*/
     }
 
-    private void setTextViewText(int id, String text) {
+    private void setTextViewText(int idrow,int id, String text, String result) {
         TextView textView = findViewById(id);
         textView.setText(text);
+        TableRow tableRow=(TableRow) findViewById(idrow);
+        if(result=="Correct")
+            tableRow.setBackgroundColor(0XFF4DB857);
+        else tableRow.setBackgroundColor(0XFFEF433F);
     }
 
     private String toCorrect(Boolean isCorrect) {

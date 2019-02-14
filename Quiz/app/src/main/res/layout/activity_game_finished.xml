@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,248 +12,227 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+
         android:orientation="vertical">
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row1"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="1."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText1"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row2"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="2."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText2"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row3"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="3."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText3"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row4"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="4."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText4"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row5"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="5."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText5"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row6"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="6."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText6"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row7"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="7."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText7"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct7"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row8"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="8."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText8"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct8"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row9"
+            android:layout_marginBottom="2dp">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="9."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText9"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/correct9"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
 
 
 
-        <TableRow android:weightSum="4">
+        <TableRow android:weightSum="4"
+            android:id="@+id/row10">
 
             <TextView
                 android:layout_margin="5dp"
                 android:text="10."
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/questionText10"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
-                android:layout_weight="3"
+                android:layout_weight="4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
                 android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/correct10"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:textSize="20sp" />
         </TableRow>
     </TableLayout>
 </ScrollView>
