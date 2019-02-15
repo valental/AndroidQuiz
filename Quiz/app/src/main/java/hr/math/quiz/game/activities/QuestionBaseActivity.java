@@ -29,6 +29,7 @@ public class QuestionBaseActivity extends AppCompatActivity {
     Game game;
     // Thread safe boolean
     AtomicBoolean done = new AtomicBoolean(false);
+    final int maxTime = 15000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,20 +43,20 @@ public class QuestionBaseActivity extends AppCompatActivity {
 
     private void ProgressBarSetup() {
         progressBar = findViewById(R.id.questionProgressBar);
-        progressBar.setMax(10000);
+        progressBar.setMax(maxTime);
 
         //---do some work in background thread---
         new Thread(new Runnable() {
             public void run() {
                 long progressTime = System.currentTimeMillis() - start;
                 //-do some work here-
-                while (progressTime < 10000) {
+                while (progressTime < maxTime) {
                     doSomeWork();
 
                     //-Update the progress bar-
                     handler.post(new Runnable() {
                         public void run() {
-                            progressBar.setProgress(10000 + (int) (start - System.currentTimeMillis()));
+                            progressBar.setProgress(maxTime + (int) (start - System.currentTimeMillis()));
                         }
                     });
                     progressTime = System.currentTimeMillis() - start;
@@ -67,7 +68,7 @@ public class QuestionBaseActivity extends AppCompatActivity {
                         if (done.compareAndSet(false, true)) {
                             // set the incorrect answer
                             game.setNextAnswer(-1);
-                            game.addTime(10000);
+                            game.addTime(maxTime);
                             OpenNextActivity();
                         }
                     }
