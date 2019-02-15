@@ -46,7 +46,7 @@ public class QuestionInputActivity extends QuestionBaseActivity {
                         FlexboxLayout.LayoutParams.WRAP_CONTENT,
                         FlexboxLayout.LayoutParams.WRAP_CONTENT);
         editText.setLayoutParams(wrap);
-        editText.setWidth(100);
+        editText.setWidth(300);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             editText.setTextAlignment(TEXT_ALIGNMENT_CENTER);
         }
