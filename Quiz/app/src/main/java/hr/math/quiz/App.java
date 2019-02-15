@@ -37,6 +37,7 @@ public class App extends Application {
 
         long hrId, enId;
 
+        //======================================== Sport 1 ==================================================
         qhr = new QuestionHR(1, "Koji je tim osvojio NBA naslov 2011. godine?", "Dallas Mavericks", "Miami Heat", "Houston Rockets", "Boston Celtics");
         qen = new QuestionEN(1, "Which team won the NBA title in 2011?", "Dallas Mavericks", "Miami Heat", "Houston Rockets", "Boston Celtics");
 
@@ -127,6 +128,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Sport 2 ==================================================
         qhr = new QuestionHR(11, "Talijanski nogometni klub A.S. Bari svoje utakmice igra na?", "Stadio Enzo Ricci", "Stadio San Paolo", "Stadio San Nicola", "Stadio Delle Alpi");
         qen = new QuestionEN(11, "Italian Football Club A.S. Bari plays their matches at?", "Stadio Enzo Ricci", "Stadio San Paolo", "Stadio San Nicola", "Stadio Delle Alpi");
 
@@ -217,6 +219,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Sport 3 ==================================================
         qhr = new QuestionHR(21, "Svjetski rekord u dizanju utega je?", "213 kg", "237 kg", "263 kg", "281 kg");
         qen = new QuestionEN(21, "World record in weightlifting is?", "213 kg", "237 kg", "263 kg", "281 kg");
 
@@ -305,6 +308,7 @@ public class App extends Application {
         enId = questionENBox.put(qen);
         question = new Question(30, 3, 1, 3, Question.Category.SPORT, hrId, enId);
 
+        //======================================== Science 1 ==================================================
         questionBox.put(question);
 
         qhr = new QuestionHR(31, "Koja je normalna ljudska temperatura (u C)?", "35", "36", "37", "38");
@@ -397,6 +401,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Science 2 ==================================================
         qhr = new QuestionHR(41, "Atmosfera Marsa je primarno sastavljena od?", "CO2", "H", "O", "N");
         qen = new QuestionEN(41, "The atmosphere of Mars is primarily composed of?", "CO2", "H", "O", "N");
 
@@ -487,6 +492,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Science 3 ==================================================
         qhr = new QuestionHR(51, "Standard USB 2.0 omogućuje prijenos podataka brzinom od?", "240 Mbit/s", "480 Mbit/s", "960 Mbit/s", "1024 Mbit/s");
         qen = new QuestionEN(51, "Standard USB 2.0 enables data transfer with speed of?", "240 Mbit/s", "480 Mbit/s", "960 Mbit/s", "1024 Mbit/s");
 
@@ -577,6 +583,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== History And Art 1 ==================================================
         qhr = new QuestionHR(61, "Hadrijanov zid nalazio se u?", "Britaniji", "Dalmaciji", "Palestini", "Daciji");
         qen = new QuestionEN(61, "Hadrian's wall was built in?", "Britain", "Dalmatia", "Palestine", "Dation");
 
@@ -667,6 +674,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== History And Art 2 ==================================================
         qhr = new QuestionHR(71, "Koje godine su u Italiji fašisti uveli diktaturu?", "1918.", "1922.", "1926.", "1933.");
         qen = new QuestionEN(71, "What year did fascists introduce dictatorship in Italy?", "1918.", "1922.", "1926.", "1933.");
 
@@ -757,6 +765,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== History And Art 3 ==================================================
         qhr = new QuestionHR(81, "Koliko je dana postojala Pariška komuna?", "61", "72", "95", "127");
         qen = new QuestionEN(81, "How many days did the Municipality of Paris exist?", "61", "72", "95", "127");
 
@@ -847,6 +856,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Geography 1 ==================================================
         qhr = new QuestionHR(91, "Glavni grad Rusije je?", "Minsk", "Sankt Peterburg", "Moskva", "Soči");
         qen = new QuestionEN(91, "The capital of Russia is?", "Minsk", "Saint Petersburg", "Moscow", "Sochi");
 
@@ -937,6 +947,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Geography 2 ==================================================
         qhr = new QuestionHR(101, "Kielski kanal povezuje Sjeverno more i?", "Grenlandsko more", "Baltičko more", "Barentsovo more", "Norveško more");
         qen = new QuestionEN(101, "The Kiel Channel connects the North Sea and?", "Grenland Sea", "Baltic Sea", "Barents Sea", "Norwegian Sea");
 
@@ -1027,6 +1038,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Geography 3 ==================================================
         qhr = new QuestionHR(111, "Najveći vulkan na zemlji po obujmu je?", "Vezuv", "Mauna Loa", "Kilimandžaro", "Etna");
         qen = new QuestionEN(111, "The largest volcano on the Earth by volume is?", "Vesuv", "Mauna Loa", "Kilimanjaro", "Etna");
 
@@ -1117,6 +1129,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Movies 1 ==================================================
         qhr = new QuestionHR(121, "Tko je bivši muž Jennifer Aniston?", "Matt Damon", "Ben Affleck", "Brad Pitt", "Johnny Depp");
         qen = new QuestionEN(121, "Who is the ex-husband of Jennifer Aniston?", "Matt Damon", "Ben Affleck", "Brad Pitt", "Johnny Depp");
 
@@ -1207,6 +1220,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Movies 2 ==================================================
         qhr = new QuestionHR(131, "Koji film nije osvojio 11 Oskara?", "Ben Hur", "Priča sa zapadne strane", "Gospodar prstenova", "Titanik");
         qen = new QuestionEN(131, "Which movie did not win 11 Oscars?", "Ben Hur", "West side story", "Lord of the rings", "Titanic");
 
@@ -1297,6 +1311,7 @@ public class App extends Application {
 
         questionBox.put(question);
 
+        //======================================== Movies 3 ==================================================
         qhr = new QuestionHR(141, "Film \"Đuka Begović\" režirao je?", "Branko Ivanda", "Branko Schmidt", "Lordan Zafranović", "Krsto Papić");
         qen = new QuestionEN(141, "Who directed the movie \"Đuka Begović\"?", "Branko Ivanda", "Branko Schmidt", "Lordan Zafranović", "Krsto Papić");
 
